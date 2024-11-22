@@ -5,6 +5,10 @@ import autoprefixer from "autoprefixer";
 
 export default defineConfig({
   root: "src",
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "src/partials"),

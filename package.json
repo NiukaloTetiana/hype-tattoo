@@ -8,7 +8,7 @@
     "watch:css": "sass src/scss/main.scss src/css/style.css --watch",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "serve": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
