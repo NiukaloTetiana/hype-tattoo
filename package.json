@@ -1,0 +1,24 @@
+{
+  "name": "hype-tattoo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:css": "sass src/scss/main.scss src/css/style.css --style=compressed",
+    "watch:css": "sass src/scss/main.scss src/css/style.css --watch",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}
