@@ -26,6 +26,11 @@
   $height: 67px,
   $gap: 3px,
   $text-width: 175px,
+  $icon-width: 65px,
+  $text-color: variables.$black-text-color,
+  $bg-color: variables.$accent-color,
+  $icon-color: variables.$black-text-color
+) {
   position: relative;
   @include flex-start;
   gap: $gap;

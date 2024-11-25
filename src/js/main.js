@@ -1,2 +1,3 @@
 import "./header";
+import "../scss/main.scss";
 console.log("hello");

@@ -1,3 +1,83 @@
-<header>
-  <div>header</div>
+<header class="header">
+  <div class="container header__container">
+    <a href="./index.html">
+      <svg class="header__logo" width="27" height="32">
+        <use href="./images/icons.svg#icon-logo"></use>
+      </svg>
+    </a>
+
+    <button
+      class="header__button-menu js-menu__open"
+      type="button"
+      aria-expanded="false"
+    >
+      Menu
+      <svg class="header__menu-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-spots"></use>
+      </svg>
+    </button>
+  </div>
 </header>
+
+<!-- MOBILE MENU -->
+<div class="container menu js-menu" id="menu">
+  <div class="menu__container-text">
+    <p class="menu__text">[ Menu ]</p>
+    <button class="menu__toggle js-menu__close" type="button">
+      Close
+      <svg width="20" height="20">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="menu__nav">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a class="menu__link" href="#gift">Gift box</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#learning">What you&apos;ll learn</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#programm">Programm</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#package">Package</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#about">About artist</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#artist">Artist</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#feedback">Feedback</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#faq">Faq</a>
+      </li>
+    </ul>
+  </nav>
+
+  <p class="menu__legacy">Create your legacy</p>
+
+  <button class="menu__button" type="button" data-modal-open>
+    <svg class="menu__button-icon-border" width="218" height="71">
+      <use href="./images/icons.svg#icon-btn-border"></use>
+    </svg>
+    <span class="menu__button-text">JOIN THE COURSE</span>
+    <span class="menu__button-span-icon">
+      <svg height="13" width="11">
+        <use href="./images/icons.svg#icon-arrow-sideward"></use>
+      </svg>
+    </span>
+  </button>
+
+  <a class="menu__contacts" href="mailto:info@devstudio.com">
+    hypetattoo@gmail.com
+  </a>
+
+  <p class="menu__copyright">(C) HYPE 2024</p>
+  <p class="menu__copyright">ALL RIGHTS RESERVED</p>
+</div>

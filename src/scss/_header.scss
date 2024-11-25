@@ -1,0 +1,207 @@
+@use "./variables";
+@use "./mixins";
+
+.header {
+  background-color: variables.$black-text-color;
+  &__container {
+    @include mixins.flex-between;
+    padding-block: 14px;
+  }
+
+  &__logo {
+    fill: variables.$white-text-color;
+  }
+
+  &__button-menu {
+    display: flex;
+    gap: 10px;
+
+    background-color: transparent;
+    width: auto;
+    height: 24px;
+
+    font-family: variables.$font-secondary;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 0.915;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: variables.$white-text-color;
+    transition: color variables.$transition-delay variables.$transition-type;
+
+    svg {
+      fill: variables.$accent-color;
+      transition: fill variables.$transition-delay variables.$transition-type;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: variables.$accent-color;
+
+      svg {
+        fill: variables.$white-text-color;
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  transform: translateY(-170%);
+
+  width: 100%;
+  height: 100%;
+  background: variables.$accent-color;
+  padding-block: 45px;
+
+  transition: transform 0.45s ease;
+
+  &__container-text {
+    @include mixins.flex-between;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: variables.$white-text-color;
+  }
+
+  &__toggle {
+    @include mixins.flex-start;
+    gap: 34px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: variables.$white-text-color;
+    transition: color variables.$transition-delay variables.$transition-type;
+
+    svg {
+      fill: variables.$white-text-color;
+      transition: fill variables.$transition-delay variables.$transition-type;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: variables.$black-text-color;
+
+      svg {
+        fill: variables.$black-text-color;
+      }
+    }
+  }
+
+  &__nav {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: variables.$black-text-color;
+    transition: text-decoration variables.$transition-delay
+      variables.$transition-type;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  &__legacy {
+    font-family: variables.$font-secondary;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 0.99;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$black-text-color;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    @include mixins.button(
+      $height: 71px,
+      $gap: 5px,
+      $text-width: 218px,
+      $icon-width: 71px,
+      $text-color: variables.$black-text-color,
+      $bg-color: variables.$black-text-color,
+      $icon-color: variables.$white-text-color
+    );
+  }
+
+  &__button {
+    margin-bottom: 52px;
+    margin-inline: auto;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      .menu__button-text {
+        background-color: variables.$white-text-color;
+      }
+
+      .menu__button-span-icon svg {
+        stroke: variables.$accent-color;
+      }
+    }
+  }
+
+  &__contacts {
+    display: inline-block;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$white-text-color;
+    margin-bottom: 12px;
+  }
+
+  &__copyright {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: variables.$white-text-color;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.is-open {
+  transform: translateY(0);
+}
