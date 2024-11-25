@@ -22,6 +22,12 @@
   justify-content: space-between;
 }
 
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 @mixin button(
   $height: 67px,
   $gap: 3px,
@@ -66,5 +72,19 @@
       stroke: $icon-color;
       transition: stroke variables.$transition-delay variables.$transition-type;
     }
+  }
+}
+
+@mixin copyright($margin-bt: 2px, $text-al: left) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: $text-al;
+  color: variables.$white-text-color;
+  margin-bottom: $margin-bt;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
