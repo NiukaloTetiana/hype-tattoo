@@ -1,0 +1,106 @@
+@use "./variables";
+@use "./mixins";
+
+.footer {
+  background-color: variables.$accent-color;
+  &__container {
+    padding-block: 42px 36px;
+    padding-inline: 10px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 127px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: variables.$white-text-color;
+    text-align: center;
+    margin-bottom: 39px;
+  }
+
+  &__wrapper {
+    padding-inline: 10px;
+  }
+
+  &__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: variables.$white-text-color;
+    margin-bottom: 2px;
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: variables.$white-text-color;
+  }
+
+  &__link-mail {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    margin-bottom: 21px;
+  }
+
+  &__link-social {
+    margin-bottom: 44px;
+  }
+
+  &__address {
+    @include mixins.flex-wrap();
+    justify-content: space-between;
+    gap: 18px 53px;
+    margin-bottom: 44px;
+    padding-right: 41px;
+  }
+
+  &__address-wrapper {
+    max-width: 154px;
+  }
+
+  &__button {
+    @include mixins.button(
+      $btn-height-sm: 49px,
+      $btn-height-lg: 121px,
+      $gap-sm: 3px,
+      $gap-lg: 8px,
+      $text-width-sm: 192px,
+      $text-width-lg: 371px,
+      $text-color: variables.$black-text-color,
+      $bg-color: variables.$black-text-color,
+      $icon-color: variables.$white-text-color
+    );
+  }
+
+  &__button {
+    margin-bottom: 44px;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      .footer__button-text {
+        background-color: variables.$white-text-color;
+      }
+
+      .footer__button-span-icon svg {
+        stroke: variables.$accent-color;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: variables.$white-text-color;
+  }
+
+  &__copyright {
+    @include mixins.copyright();
+  }
+}

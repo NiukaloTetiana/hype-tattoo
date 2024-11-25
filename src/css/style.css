@@ -256,6 +256,12 @@ menu {
   gap: 5px;
   height: 71px;
 }
+@media only screen and (min-width: 1920px) {
+  .menu__button {
+    height: 121px;
+    gap: 8px;
+  }
+}
 .menu__button-text {
   display: flex;
   justify-content: center;
@@ -269,10 +275,32 @@ menu {
   color: #000;
   transition: background-color 0.3s ease;
 }
+@media only screen and (min-width: 1920px) {
+  .menu__button-text {
+    width: 371px;
+  }
+}
 .menu__button-icon-border {
   position: absolute;
   top: 0;
   left: 0;
+  width: 218px;
+  height: 71px;
+}
+.menu__button-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .menu__button-icon-border {
+    width: 371px;
+    height: 121px;
+  }
+  .menu__button-icon-border-sm {
+    display: none;
+  }
+  .menu__button-icon-border-lg {
+    display: inline;
+  }
 }
 .menu__button-span-icon {
   display: flex;
@@ -281,6 +309,11 @@ menu {
   height: 100%;
   width: 71px;
   background-color: #000;
+}
+@media only screen and (min-width: 1920px) {
+  .menu__button-span-icon {
+    width: 121px;
+  }
 }
 .menu__button-span-icon svg {
   stroke: #fff;
@@ -401,6 +434,12 @@ menu {
   gap: 3px;
   height: 67px;
 }
+@media only screen and (min-width: 1920px) {
+  .hero__button {
+    height: 104px;
+    gap: 4px;
+  }
+}
 .hero__button-text {
   display: flex;
   justify-content: center;
@@ -414,18 +453,45 @@ menu {
   color: #000;
   transition: background-color 0.3s ease;
 }
+@media only screen and (min-width: 1920px) {
+  .hero__button-text {
+    width: 320px;
+  }
+}
 .hero__button-icon-border {
   position: absolute;
   top: 0;
   left: 0;
+  width: 175px;
+  height: 67px;
+}
+.hero__button-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .hero__button-icon-border {
+    width: 320px;
+    height: 104px;
+  }
+  .hero__button-icon-border-sm {
+    display: none;
+  }
+  .hero__button-icon-border-lg {
+    display: inline;
+  }
 }
 .hero__button-span-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 65px;
+  width: 67px;
   background-color: #00d0d2;
+}
+@media only screen and (min-width: 1920px) {
+  .hero__button-span-icon {
+    width: 104px;
+  }
 }
 .hero__button-span-icon svg {
   stroke: #000;
@@ -564,6 +630,85 @@ menu {
 }
 .footer__address-wrapper {
   max-width: 154px;
+}
+.footer__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 49px;
+}
+@media only screen and (min-width: 1920px) {
+  .footer__button {
+    height: 121px;
+    gap: 8px;
+  }
+}
+.footer__button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 192px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+@media only screen and (min-width: 1920px) {
+  .footer__button-text {
+    width: 371px;
+  }
+}
+.footer__button-icon-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 192px;
+  height: 49px;
+}
+.footer__button-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .footer__button-icon-border {
+    width: 371px;
+    height: 121px;
+  }
+  .footer__button-icon-border-sm {
+    display: none;
+  }
+  .footer__button-icon-border-lg {
+    display: inline;
+  }
+}
+.footer__button-span-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 49px;
+  background-color: #000;
+}
+@media only screen and (min-width: 1920px) {
+  .footer__button-span-icon {
+    width: 121px;
+  }
+}
+.footer__button-span-icon svg {
+  stroke: #fff;
+  transition: stroke 0.3s ease;
+}
+.footer__button {
+  margin-bottom: 44px;
+}
+.footer__button:hover .footer__button-text, .footer__button:focus-visible .footer__button-text, .footer__button:active .footer__button-text {
+  background-color: #fff;
+}
+.footer__button:hover .footer__button-span-icon svg, .footer__button:focus-visible .footer__button-span-icon svg, .footer__button:active .footer__button-span-icon svg {
+  stroke: #00d0d2;
 }
 .footer__text {
   font-weight: 500;

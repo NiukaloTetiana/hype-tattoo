@@ -146,10 +146,12 @@
 
   &__button {
     @include mixins.button(
-      $height: 71px,
-      $gap: 5px,
-      $text-width: 218px,
-      $icon-width: 71px,
+      $btn-height-sm: 71px,
+      $btn-height-lg: 121px,
+      $gap-sm: 5px,
+      $gap-lg: 8px,
+      $text-width-sm: 218px,
+      $text-width-lg: 371px,
       $text-color: variables.$black-text-color,
       $bg-color: variables.$black-text-color,
       $icon-color: variables.$white-text-color

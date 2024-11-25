@@ -29,23 +29,32 @@
 }
 
 @mixin button(
-  $height: 67px,
-  $gap: 3px,
-  $text-width: 175px,
-  $icon-width: 65px,
+  $btn-height-sm: 67px,
+  $btn-height-lg: 104px,
+  $gap-sm: 3px,
+  $gap-lg: 4px,
+  $text-width-sm: 175px,
+  $text-width-lg: 320px,
   $text-color: variables.$black-text-color,
+
   $bg-color: variables.$accent-color,
   $icon-color: variables.$black-text-color
 ) {
   position: relative;
   @include flex-start;
-  gap: $gap;
-  height: $height;
+  gap: $gap-sm;
+  height: $btn-height-sm;
+  @media only screen and (min-width: 1920px) {
+    & {
+      height: $btn-height-lg;
+      gap: $gap-lg;
+    }
+  }
 
   &-text {
     @include flex-center;
     height: 100%;
-    width: $text-width;
+    width: $text-width-sm;
 
     font-weight: 800;
     font-size: 14px;
@@ -54,19 +63,46 @@
     color: $text-color;
     transition: background-color variables.$transition-delay
       variables.$transition-type;
+    @media only screen and (min-width: 1920px) {
+      & {
+        width: $text-width-lg;
+      }
+    }
   }
 
   &-icon-border {
     position: absolute;
     top: 0;
     left: 0;
+    width: $text-width-sm;
+    height: $btn-height-sm;
+    &-lg {
+      display: none;
+    }
+    @media (min-width: 1920px) {
+      width: $text-width-lg;
+      height: $btn-height-lg;
+      &-sm {
+        display: none;
+      }
+
+      &-lg {
+        display: inline;
+      }
+    }
   }
 
   &-span-icon {
     @include flex-center;
     height: 100%;
-    width: $icon-width;
+    width: $btn-height-sm;
     background-color: $bg-color;
+
+    @media only screen and (min-width: 1920px) {
+      & {
+        width: $btn-height-lg;
+      }
+    }
 
     svg {
       stroke: $icon-color;
