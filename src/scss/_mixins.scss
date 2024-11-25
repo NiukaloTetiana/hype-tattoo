@@ -1,5 +1,65 @@
+@use "./variables";
+
+@mixin container-max-width($width, $padding) {
+  max-width: $width;
+  padding: 0 $padding;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin button(
+  $height: 67px,
+  $gap: 3px,
+  $text-width: 175px,
+  position: relative;
+  @include flex-start;
+  gap: $gap;
+  height: $height;
+
+  &-text {
+    @include flex-center;
+    height: 100%;
+    width: $text-width;
+
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: $text-color;
+    transition: background-color variables.$transition-delay
+      variables.$transition-type;
+  }
+
+  &-icon-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-span-icon {
+    @include flex-center;
+    height: 100%;
+    width: $icon-width;
+    background-color: $bg-color;
+
+    svg {
+      stroke: $icon-color;
+      transition: stroke variables.$transition-delay variables.$transition-type;
+    }
+  }
 }
