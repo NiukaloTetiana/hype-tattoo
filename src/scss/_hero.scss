@@ -1,0 +1,87 @@
+@use "./variables";
+@use "./mixins";
+
+.hero {
+  background-image: url("../images/hero/hero_mobile_1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top -140px;
+  background-size: cover;
+  padding-top: 51px;
+  padding-bottom: 96px;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+    (max-width: 767px) and (min-resolution: 192dpi) {
+    background-image: url("../images/hero/hero_mobile_2x.jpg");
+  }
+
+  @media only screen and (min-width: 1440px) {
+    background-image: url("../images/hero/hero_desktop_1x.jpg");
+  }
+
+  @media only screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
+    (min-width: 1440px) and (min-resolution: 192dpi) {
+    background-image: url("../images/hero/hero_desktop_2x.jpg");
+  }
+
+  &__text-container {
+    @include mixins.flex-start;
+    gap: 12px;
+    margin-bottom: 51px;
+  }
+
+  &__text {
+    width: 95px;
+
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 1.11;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: variables.$black-text-color;
+  }
+
+  &__text-icon-first {
+    fill: variables.$black-text-color;
+  }
+
+  &__text-icon-second {
+    stroke: variables.$black-text-color;
+    fill: variables.$black-text-color;
+  }
+
+  &__title {
+    width: 260px;
+
+    font-family: variables.$font-secondary;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 0.99;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: variables.$black-text-color;
+    margin-bottom: 51px;
+  }
+
+  &__title-span {
+    display: inline-block;
+    width: 203px;
+  }
+
+  &__button {
+    @include mixins.button();
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      .hero__button-text {
+        background-color: variables.$white-text-color;
+      }
+
+      .hero__button-span-icon svg {
+        stroke: variables.$white-text-color;
+      }
+    }
+  }
+}
