@@ -560,7 +560,7 @@
 <symbol id="icon-package-btn-border-lg-color" fill="none" viewBox="0 0 372 122">
      <path stroke="#00D0D2" stroke-width="1.25" d="M371.125 0v17.5M370.5.625H353M371.125 121.25v-17.5M370.5 120.625H353M.625 0v17.5M1.25.625h17.5M.625 121.25v-17.5M1.25 120.625h17.5"/>
 </symbol>
-<symbol id="icon-footer-btn-border-sm" fill="none" viewBox="0 0 225 74">
+<symbol id="icon-footer-btn-border-sm" fill="none" viewBox="0 0 194 49">
        <g filter="url(#a)">
     <path d="M1 .19h192v48H1v-48Z" fill="url(#b)"/>
     <path d="M1.2.39h191.6v47.6H1.2V.39Z" stroke="url(#c)" stroke-opacity=".46" stroke-width=".4"/>

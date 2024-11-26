@@ -1,0 +1,77 @@
+@use "./variables";
+@use "./mixins";
+
+.gift {
+  padding-bottom: 56px;
+
+  &__img {
+    margin-bottom: 16px;
+  }
+
+  &__container {
+    padding-inline: 10px;
+  }
+
+  &__container-list {
+    border-radius: 22px;
+    padding: 20px;
+    margin-bottom: 31px;
+    background-color: variables.$white-text-color;
+  }
+
+  &__list--container {
+    @include mixins.flex-start;
+    margin-bottom: 8px;
+
+    &__item {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.91667;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: variables.$dark-text-color;
+      background-color: variables.$accent-color;
+      padding: 8px 12px;
+      border-radius: 100px;
+    }
+  }
+
+  &__title {
+    font-family: variables.$font-secondary;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 0.99;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-inline: 20px;
+  }
+
+  &__list--item {
+    @include mixins.flex-start;
+    gap: 16px;
+
+    span {
+      @include mixins.flex-center;
+      border: 1px solid variables.$black-text-color;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 2;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}
