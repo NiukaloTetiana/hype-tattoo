@@ -421,7 +421,7 @@
     </filter>
   </defs>
 </symbol>
-<symbol id="icon-program-btn-border-sm" fill="none" viewBox="0 0 165 62">
+<symbol id="icon-programm-btn-border-sm" fill="none" viewBox="0 0 165 62">
      <g filter="url(#a)">
     <path d="M.471 0H164.1v62H.471V0Z" fill="url(#b)" fill-opacity=".33"/>
     <path d="M163.844.256v61.488H.727V.256H163.844Z" stroke="url(#c)" stroke-opacity=".46" stroke-width=".511"/>
@@ -454,7 +454,7 @@
     </filter>
   </defs>
 </symbol>
-<symbol id="icon-program-btn-border-lg" fill="none" viewBox="0 0 320 122">
+<symbol id="icon-programm-btn-border-lg" fill="none" viewBox="0 0 320 122">
     <g filter="url(#a)">
     <path d="M0 0h320v121.25H0V0Z" fill="url(#b)" fill-opacity=".33"/>
     <path d="M.5.5h319v120.25H.5V.5Z" stroke="url(#c)" stroke-opacity=".46"/>
