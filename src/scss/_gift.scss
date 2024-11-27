@@ -12,7 +12,7 @@
     padding-inline: 10px;
   }
 
-  &__container-list {
+  &__wrapper-list {
     border-radius: 22px;
     padding: 20px;
     margin-bottom: 31px;
@@ -37,11 +37,7 @@
   }
 
   &__title {
-    font-family: variables.$font-secondary;
-    font-weight: 700;
-    font-size: 62px;
-    line-height: 0.99;
-    text-transform: uppercase;
+    @include mixins.title;
   }
 
   &__list {

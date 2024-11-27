@@ -66,11 +66,7 @@
   }
 
   &__text {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.3;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
+    @include mixins.text;
     color: variables.$white-text-color;
   }
 
@@ -78,11 +74,7 @@
     @include mixins.flex-start;
     gap: 34px;
 
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.3;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
+    @include mixins.text;
     color: variables.$white-text-color;
     transition: color variables.$transition-delay variables.$transition-type;
 

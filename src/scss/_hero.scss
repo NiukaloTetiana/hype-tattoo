@@ -13,10 +13,8 @@
   &__img-container {
     padding-top: 51px;
     padding-bottom: 96px;
-    background-image: url("../images/hero/hero_mobile_1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center top -140px;
-    background-size: cover;
+    background: url("../images/hero/hero_mobile_1x.jpg") no-repeat center top -140px /
+      cover;
     max-width: 1920px;
     height: 641px;
     margin-inline: auto;
@@ -61,14 +59,9 @@
   }
 
   &__title {
-    width: 260px;
+    @include mixins.title;
 
-    font-family: variables.$font-secondary;
-    font-weight: 700;
-    font-size: 62px;
-    line-height: 0.99;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+    width: 260px;
     margin-bottom: 51px;
   }
 
