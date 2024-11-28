@@ -2,8 +2,8 @@
 @use "./mixins";
 
 .programm {
-  .container {
-    padding-bottom: 57px;
+  &__container {
+    margin-bottom: 57px;
   }
 
   &__list {
@@ -23,47 +23,29 @@
         padding-top: 0;
       }
 
-      label {
-        cursor: pointer;
-      }
-
-      &:has(input:checked) {
+      &:has(details[open]) {
         padding-bottom: 40px;
       }
     }
   }
 
-  &__content {
-    position: absolute;
-    opacity: 0;
-    transform: scaleY(0);
-    transition: transform 0.5s ease;
+  &__details {
+    opacity: 20%;
+    transition: opacity 0.3s ease;
   }
 
-  &__radio {
-    display: none;
-  }
-
-  &__radio:checked ~ &__meeting {
+  &__details[open] {
     opacity: 1;
     margin-bottom: 30px;
   }
 
-  &__radio:checked ~ &__content {
-    position: static;
-    opacity: 1;
-    transform: scaleY(1);
-  }
-
   &__meeting {
     @include mixins.flex-start;
-    opacity: 20%;
 
     &__label {
       border: 0.5px solid variables.$black-text-color;
       border-radius: 50px;
       padding: 5px 10px;
-      align-items: center;
 
       font-weight: 600;
       font-size: 10px;
@@ -72,14 +54,18 @@
       text-transform: uppercase;
     }
 
-    span {
-      margin-right: 15px;
-    }
-
     &__title {
       font-weight: 500;
       font-size: 18px;
     }
+
+    span:nth-last-child(2) {
+      margin-right: 15px;
+    }
+  }
+
+  &__span {
+    padding-inline: 8px;
   }
 
   &__img--meeting {
@@ -88,6 +74,20 @@
     &__nomargin {
       margin-bottom: 0;
     }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition-duration: 0.5s;
+
+    &__body {
+      overflow: hidden;
+    }
+  }
+
+  &__details[open] + &__content {
+    grid-template-rows: 1fr;
   }
 
   &__title {
@@ -158,9 +158,7 @@
       $bg-color: variables.$accent-color,
       $icon-color: variables.$black-text-color
     );
-  }
 
-  &__button {
     &:hover,
     &:focus-visible,
     &:active {
@@ -175,9 +173,36 @@
   }
 
   &__img--container {
+    position: relative;
     background-color: variables.$black-text-color;
     padding-top: 66px;
-    svg {
+    padding-bottom: 79px;
+    isolation: isolate;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 463px;
+      height: 463px;
+      background-color: variables.$accent-color;
+      border-radius: 50%;
+      filter: blur(300px);
+    }
+
+    &::before {
+      top: -256px;
+      left: -248px;
+    }
+
+    &::after {
+      bottom: -256px;
+      right: -248px;
+    }
+
+    &__icon {
       display: block;
       margin-inline: auto;
       fill: variables.$white-text-color;
@@ -211,7 +236,7 @@
       @include mixins.title;
       font-size: 59px;
       color: variables.$white-text-color;
-      // mix-blend-mode: color-dodge;
+      mix-blend-mode: color-dodge;
       padding-top: 243px;
     }
   }
@@ -231,7 +256,40 @@
     @include mixins.flex-between;
 
     svg {
-      fill: variables.$white-text-color;
+      stroke: variables.$white-text-color;
+      fill: none;
+
+      &:last-child {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__button--best {
+    @include mixins.button(
+      $btn-height-sm: 62px,
+      $btn-height-lg: 121px,
+      $gap-sm: 3px,
+      $gap-lg: 5px,
+      $text-width-sm: 164px,
+      $text-width-lg: 320px,
+      $text-color: variables.$accent-color,
+      $bg-color: variables.$accent-color,
+      $icon-color: variables.$black-text-color
+    );
+    margin-bottom: 33px;
+    margin-inline: auto;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      .programm__button--best-text {
+        background-color: variables.$white-text-color;
+      }
+
+      .programm__button--best-span-icon svg {
+        stroke: variables.$white-text-color;
+      }
     }
   }
 }

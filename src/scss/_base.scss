@@ -64,6 +64,11 @@ menu {
   padding-left: 0;
 }
 
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
 .container {
   max-width: 375px;
   padding: 0 20px;

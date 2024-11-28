@@ -61,6 +61,11 @@ menu {
   padding-left: 0;
 }
 
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
 .container {
   max-width: 375px;
   padding: 0 20px;
@@ -925,8 +930,8 @@ menu {
   background-color: #00d0d2;
 }
 
-.programm .container {
-  padding-bottom: 57px;
+.programm__container {
+  margin-bottom: 57px;
 }
 .programm__list {
   display: flex;
@@ -943,58 +948,57 @@ menu {
 .programm__list__item:first-child {
   padding-top: 0;
 }
-.programm__list__item label {
-  cursor: pointer;
-}
-.programm__list__item:has(input:checked) {
+.programm__list__item:has(details[open]) {
   padding-bottom: 40px;
 }
-.programm__content {
-  position: absolute;
-  opacity: 0;
-  transform: scaleY(0);
-  transition: transform 0.5s ease;
+.programm__details {
+  opacity: 20%;
+  transition: opacity 0.3s ease;
 }
-.programm__radio {
-  display: none;
-}
-.programm__radio:checked ~ .programm__meeting {
+.programm__details[open] {
   opacity: 1;
   margin-bottom: 30px;
-}
-.programm__radio:checked ~ .programm__content {
-  position: static;
-  opacity: 1;
-  transform: scaleY(1);
 }
 .programm__meeting {
   display: flex;
   align-items: center;
-  opacity: 20%;
 }
 .programm__meeting__label {
   border: 0.5px solid #000;
   border-radius: 50px;
   padding: 5px 10px;
-  align-items: center;
   font-weight: 600;
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
-.programm__meeting span {
-  margin-right: 15px;
-}
 .programm__meeting__title {
   font-weight: 500;
   font-size: 18px;
+}
+.programm__meeting span:nth-last-child(2) {
+  margin-right: 15px;
+}
+.programm__span {
+  padding-inline: 8px;
 }
 .programm__img--meeting {
   margin-bottom: 24px;
 }
 .programm__img--meeting__nomargin {
   margin-bottom: 0;
+}
+.programm__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition-duration: 0.5s;
+}
+.programm__content__body {
+  overflow: hidden;
+}
+.programm__details[open] + .programm__content {
+  grid-template-rows: 1fr;
 }
 .programm__title {
   font-family: "Druk Cyr", serif;
@@ -1127,10 +1131,32 @@ menu {
   stroke: #fff;
 }
 .programm__img--container {
+  position: relative;
   background-color: #000;
   padding-top: 66px;
+  padding-bottom: 79px;
+  isolation: isolate;
+  overflow: hidden;
 }
-.programm__img--container svg {
+.programm__img--container::before, .programm__img--container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 463px;
+  height: 463px;
+  background-color: #00d0d2;
+  border-radius: 50%;
+  filter: blur(300px);
+}
+.programm__img--container::before {
+  top: -256px;
+  left: -248px;
+}
+.programm__img--container::after {
+  bottom: -256px;
+  right: -248px;
+}
+.programm__img--container__icon {
   display: block;
   margin-inline: auto;
   fill: #fff;
@@ -1167,6 +1193,7 @@ menu {
   text-transform: uppercase;
   font-size: 59px;
   color: #fff;
+  mix-blend-mode: color-dodge;
   padding-top: 243px;
 }
 .programm__img--text {
@@ -1185,7 +1212,89 @@ menu {
   justify-content: space-between;
 }
 .programm__icon--container svg {
-  fill: #fff;
+  stroke: #fff;
+  fill: none;
+}
+.programm__icon--container svg:last-child {
+  transform: rotate(180deg);
+}
+.programm__button--best {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 62px;
+  margin-bottom: 33px;
+  margin-inline: auto;
+}
+@media only screen and (min-width: 1920px) {
+  .programm__button--best {
+    height: 121px;
+    gap: 5px;
+  }
+}
+.programm__button--best-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 164px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #00d0d2;
+  transition: background-color 0.3s ease;
+}
+@media only screen and (min-width: 1920px) {
+  .programm__button--best-text {
+    width: 320px;
+  }
+}
+.programm__button--best-icon-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 164px;
+  height: 62px;
+}
+.programm__button--best-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .programm__button--best-icon-border {
+    width: 320px;
+    height: 121px;
+  }
+  .programm__button--best-icon-border-sm {
+    display: none;
+  }
+  .programm__button--best-icon-border-lg {
+    display: inline;
+  }
+}
+.programm__button--best-span-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 62px;
+  background-color: #00d0d2;
+}
+@media only screen and (min-width: 1920px) {
+  .programm__button--best-span-icon {
+    width: 121px;
+  }
+}
+.programm__button--best-span-icon svg {
+  stroke: #000;
+  transition: stroke 0.3s ease;
+}
+.programm__button--best:hover .programm__button--best-text, .programm__button--best:focus-visible .programm__button--best-text, .programm__button--best:active .programm__button--best-text {
+  background-color: #fff;
+}
+.programm__button--best:hover .programm__button--best-span-icon svg, .programm__button--best:focus-visible .programm__button--best-span-icon svg, .programm__button--best:active .programm__button--best-span-icon svg {
+  stroke: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
