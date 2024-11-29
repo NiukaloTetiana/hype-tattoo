@@ -39,6 +39,10 @@
     margin-bottom: 30px;
   }
 
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
   &__meeting {
     @include mixins.flex-start;
 
@@ -52,28 +56,24 @@
       line-height: 1.5;
       letter-spacing: -0.02em;
       text-transform: uppercase;
+
+      &:nth-last-child(2) {
+        margin-right: 15px;
+      }
     }
 
     &__title {
       font-weight: 500;
       font-size: 18px;
     }
-
-    span:nth-last-child(2) {
-      margin-right: 15px;
-    }
   }
 
-  &__span {
+  &__number {
     padding-inline: 8px;
   }
 
   &__img--meeting {
     margin-bottom: 24px;
-
-    &__nomargin {
-      margin-bottom: 0;
-    }
   }
 
   &__content {
@@ -142,8 +142,18 @@
     width: 290px;
   }
 
+  &__img--block {
+    @include mixins.flex-start;
+    gap: 17px;
+    margin-bottom: 30px;
+  }
+
   &__name {
     width: 68px;
+  }
+
+  &__nomargin {
+    margin-bottom: 0;
   }
 
   &__button {
@@ -173,12 +183,12 @@
   }
 
   &__img--container {
-    position: relative;
     background-color: variables.$black-text-color;
+    position: relative;
     padding-top: 66px;
-    padding-bottom: 79px;
     isolation: isolate;
     overflow: hidden;
+    padding-bottom: 79px;
 
     &::before,
     &::after {
@@ -218,7 +228,7 @@
     height: 332px;
     margin-bottom: 43px;
 
-    @media only screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+    @media only screen and (max-width: 1439.99px) and (min-device-pixel-ratio: 2),
       (max-width: 767px) and (min-resolution: 192dpi) {
       background-image: url("../images/programm/programm_mobile_best_2x.png");
     }
@@ -235,6 +245,7 @@
     &__title {
       @include mixins.title;
       font-size: 59px;
+      text-align: center;
       color: variables.$white-text-color;
       mix-blend-mode: color-dodge;
       padding-top: 243px;
@@ -266,6 +277,9 @@
   }
 
   &__button--best {
+    margin-bottom: 33px;
+    margin-inline: auto;
+
     @include mixins.button(
       $btn-height-sm: 62px,
       $btn-height-lg: 121px,
@@ -277,8 +291,6 @@
       $bg-color: variables.$accent-color,
       $icon-color: variables.$black-text-color
     );
-    margin-bottom: 33px;
-    margin-inline: auto;
 
     &:hover,
     &:focus-visible,
