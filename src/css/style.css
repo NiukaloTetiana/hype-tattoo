@@ -1687,4 +1687,52 @@ summary {
   stroke: #000;
 }
 
+.about__container {
+  padding-block: 67px;
+  background-color: #00d0d2;
+}
+.about__icon {
+  fill: #000;
+  display: block;
+  margin-inline: auto;
+}
+.about__margin {
+  margin-bottom: 33px;
+}
+.about__title {
+  font-family: "Druk Cyr", serif;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.about__subtitle {
+  font-family: "Druk Cyr", serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.about__text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #1e1e1e;
+  width: 210px;
+  margin-inline: auto;
+}
+.about__img {
+  margin-inline: auto;
+  max-width: 375px;
+  max-height: 446px;
+}
+
 /*# sourceMappingURL=style.css.map */

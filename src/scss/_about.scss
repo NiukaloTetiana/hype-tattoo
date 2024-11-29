@@ -1,0 +1,53 @@
+@use "./variables";
+@use "./mixins";
+
+.about {
+  &__container {
+    padding-block: 67px;
+    background-color: variables.$accent-color;
+  }
+
+  &__icon {
+    fill: variables.$black-text-color;
+    display: block;
+    margin-inline: auto;
+  }
+
+  &__margin {
+    margin-bottom: 33px;
+  }
+
+  &__title {
+    @include mixins.title;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__subtitle {
+    font-family: variables.$font-secondary;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: variables.$dark-text-color;
+    width: 210px;
+    margin-inline: auto;
+  }
+
+  &__img {
+    margin-inline: auto;
+    max-width: 375px;
+    max-height: 446px;
+  }
+}
