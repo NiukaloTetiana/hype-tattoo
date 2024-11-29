@@ -2,9 +2,7 @@
 @use "./mixins";
 
 .package {
-  &__container {
-    padding-bottom: 56px;
-  }
+  padding-bottom: 56px;
 
   &__title {
     @include mixins.title;

@@ -1,0 +1,38 @@
+@use "./variables";
+@use "./mixins";
+
+.faq {
+  padding-bottom: 49px;
+
+  &__title {
+    @include mixins.title;
+    margin-bottom: 34px;
+  }
+
+  &__wrapper--item {
+    @include mixins.flex-between;
+    padding-block: 22px;
+    border-top: 1px solid #414141;
+    height: 77px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    width: 252px;
+  }
+
+  &__span {
+    @include mixins.flex-center;
+    border-radius: 100%;
+    border: 1.27px solid #414141;
+    width: 33px;
+    height: 33px;
+  }
+
+  &__icon {
+    fill: variables.$black-text-color;
+    stroke: none;
+  }
+}

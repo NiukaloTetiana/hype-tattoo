@@ -1319,7 +1319,7 @@ summary {
   stroke: #fff;
 }
 
-.package__container {
+.package {
   padding-bottom: 56px;
 }
 .package__title {
@@ -1687,9 +1687,9 @@ summary {
   stroke: #000;
 }
 
-.about__container {
-  padding-block: 67px;
+.about {
   background-color: #00d0d2;
+  padding-top: 67px;
 }
 .about__icon {
   fill: #000;
@@ -1698,6 +1698,9 @@ summary {
 }
 .about__margin {
   margin-bottom: 33px;
+}
+.about__margin--svg {
+  margin-bottom: 66px;
 }
 .about__title {
   font-family: "Druk Cyr", serif;
@@ -1733,6 +1736,46 @@ summary {
   margin-inline: auto;
   max-width: 375px;
   max-height: 446px;
+}
+
+.faq {
+  padding-bottom: 49px;
+}
+.faq__title {
+  font-family: "Druk Cyr", serif;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+}
+.faq__wrapper--item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 22px;
+  border-top: 1px solid #414141;
+  height: 77px;
+}
+.faq__text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  width: 252px;
+}
+.faq__span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1.27px solid #414141;
+  width: 33px;
+  height: 33px;
+}
+.faq__icon {
+  fill: #000;
+  stroke: none;
 }
 
 /*# sourceMappingURL=style.css.map */

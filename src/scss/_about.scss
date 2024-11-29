@@ -2,10 +2,8 @@
 @use "./mixins";
 
 .about {
-  &__container {
-    padding-block: 67px;
-    background-color: variables.$accent-color;
-  }
+  background-color: variables.$accent-color;
+  padding-top: 67px;
 
   &__icon {
     fill: variables.$black-text-color;
@@ -15,6 +13,10 @@
 
   &__margin {
     margin-bottom: 33px;
+  }
+
+  &__margin--svg {
+    margin-bottom: 66px;
   }
 
   &__title {
