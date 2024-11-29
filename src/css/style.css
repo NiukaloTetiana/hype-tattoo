@@ -281,7 +281,9 @@ summary {
   font-size: 14px;
   line-height: 1;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   color: #000;
+  background: transparent;
   transition: background-color 0.3s ease;
 }
 @media only screen and (min-width: 1920px) {
@@ -456,7 +458,9 @@ summary {
   font-size: 14px;
   line-height: 1;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   color: #000;
+  background: transparent;
   transition: background-color 0.3s ease;
 }
 @media only screen and (min-width: 1920px) {
@@ -660,7 +664,9 @@ summary {
   font-size: 14px;
   line-height: 1;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   color: #000;
+  background: transparent;
   transition: background-color 0.3s ease;
 }
 @media only screen and (min-width: 1920px) {
@@ -740,6 +746,7 @@ summary {
   padding-bottom: 56px;
 }
 .gift__img {
+  margin-inline: auto;
   margin-bottom: 16px;
 }
 .gift__container {
@@ -813,6 +820,7 @@ summary {
 .learning::before {
   content: "";
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -959,6 +967,9 @@ summary {
   opacity: 1;
   margin-bottom: 30px;
 }
+.programm details > summary::-webkit-details-marker {
+  display: none;
+}
 .programm__meeting {
   display: flex;
   align-items: center;
@@ -973,21 +984,18 @@ summary {
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
+.programm__meeting__label:nth-last-child(2) {
+  margin-right: 15px;
+}
 .programm__meeting__title {
   font-weight: 500;
   font-size: 18px;
 }
-.programm__meeting span:nth-last-child(2) {
-  margin-right: 15px;
-}
-.programm__span {
+.programm__number {
   padding-inline: 8px;
 }
 .programm__img--meeting {
   margin-bottom: 24px;
-}
-.programm__img--meeting__nomargin {
-  margin-bottom: 0;
 }
 .programm__content {
   display: grid;
@@ -1051,8 +1059,17 @@ summary {
   margin-bottom: 24px;
   width: 290px;
 }
+.programm__img--block {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 30px;
+}
 .programm__name {
   width: 68px;
+}
+.programm__nomargin {
+  margin-bottom: 0;
 }
 .programm__button {
   position: relative;
@@ -1077,7 +1094,9 @@ summary {
   font-size: 14px;
   line-height: 1;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   color: #000;
+  background: transparent;
   transition: background-color 0.3s ease;
 }
 @media only screen and (min-width: 1920px) {
@@ -1131,12 +1150,12 @@ summary {
   stroke: #fff;
 }
 .programm__img--container {
-  position: relative;
   background-color: #000;
+  position: relative;
   padding-top: 66px;
-  padding-bottom: 79px;
   isolation: isolate;
   overflow: hidden;
+  padding-bottom: 79px;
 }
 .programm__img--container::before, .programm__img--container::after {
   content: "";
@@ -1169,7 +1188,7 @@ summary {
   height: 332px;
   margin-bottom: 43px;
 }
-@media only screen and (max-width: 767px) and (min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi) {
+@media only screen and (max-width: 1439.99px) and (min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi) {
   .programm__img--wrapper {
     background-image: url("../images/programm/programm_mobile_best_2x.png");
   }
@@ -1192,6 +1211,7 @@ summary {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   font-size: 59px;
+  text-align: center;
   color: #fff;
   mix-blend-mode: color-dodge;
   padding-top: 243px;
@@ -1219,13 +1239,13 @@ summary {
   transform: rotate(180deg);
 }
 .programm__button--best {
+  margin-bottom: 33px;
+  margin-inline: auto;
   position: relative;
   display: flex;
   align-items: center;
   gap: 3px;
   height: 62px;
-  margin-bottom: 33px;
-  margin-inline: auto;
 }
 @media only screen and (min-width: 1920px) {
   .programm__button--best {
@@ -1243,7 +1263,9 @@ summary {
   font-size: 14px;
   line-height: 1;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   color: #00d0d2;
+  background: transparent;
   transition: background-color 0.3s ease;
 }
 @media only screen and (min-width: 1920px) {
@@ -1295,6 +1317,374 @@ summary {
 }
 .programm__button--best:hover .programm__button--best-span-icon svg, .programm__button--best:focus-visible .programm__button--best-span-icon svg, .programm__button--best:active .programm__button--best-span-icon svg {
   stroke: #fff;
+}
+
+.package__container {
+  padding-bottom: 56px;
+}
+.package__title {
+  font-family: "Druk Cyr", serif;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 73px;
+  margin-bottom: 62px;
+}
+.package__card--list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.package__card {
+  position: relative;
+  border: 0.6px solid rgba(0, 0, 0, 0.22);
+  padding: 42px 17px 36px;
+}
+.package__card__bg--white {
+  background-color: #fff;
+}
+.package__card__bg--accent {
+  background-color: #00d0d2;
+}
+.package__card__bg--black {
+  background-color: #000;
+}
+.package__wrapper {
+  padding-inline: 10px;
+}
+.package__wrapper--icon {
+  position: absolute;
+  top: 35px;
+  right: 36px;
+  fill: #00d0d2;
+}
+.package__fill--accent {
+  fill: #00d0d2;
+}
+.package__fill--black {
+  fill: #000;
+}
+.package__fill--white {
+  fill: #fff;
+}
+.package__text-color {
+  color: #fff;
+}
+.package__subtitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  margin-bottom: 37px;
+}
+.package__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 27px;
+}
+.package__item--container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+}
+.package__item--opacity {
+  opacity: 0.22;
+}
+.package__icon {
+  fill: #000;
+}
+.package__icon--white {
+  fill: #fff;
+}
+.package__stroke--black {
+  stroke: #000;
+}
+.package__stroke--white {
+  stroke: #fff;
+}
+.package__item--title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+.package__item--text {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.66;
+}
+.package__price {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.package__price--old {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  text-decoration: line-through;
+  opacity: 0.33;
+  text-align: center;
+  margin-bottom: 37px;
+}
+.package__span--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+.package__btn--list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+.package__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 73px;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button {
+    height: 121px;
+    gap: 8px;
+  }
+}
+.package__button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 223px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #000;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button-text {
+    width: 371px;
+  }
+}
+.package__button-icon-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 223px;
+  height: 73px;
+}
+.package__button-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .package__button-icon-border {
+    width: 371px;
+    height: 121px;
+  }
+  .package__button-icon-border-sm {
+    display: none;
+  }
+  .package__button-icon-border-lg {
+    display: inline;
+  }
+}
+.package__button-span-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 73px;
+  background-color: #00d0d2;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button-span-icon {
+    width: 121px;
+  }
+}
+.package__button-span-icon svg {
+  stroke: #fff;
+  transition: stroke 0.3s ease;
+}
+.package__button:hover .package__button-text, .package__button:focus-visible .package__button-text, .package__button:active .package__button-text {
+  background-color: #00d0d2;
+}
+.package__button:hover .package__button-span-icon svg, .package__button:focus-visible .package__button-span-icon svg, .package__button:active .package__button-span-icon svg {
+  stroke: #000;
+}
+.package__button--hyper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 73px;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button--hyper {
+    height: 121px;
+    gap: 8px;
+  }
+}
+.package__button--hyper-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 223px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #000;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button--hyper-text {
+    width: 371px;
+  }
+}
+.package__button--hyper-icon-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 223px;
+  height: 73px;
+}
+.package__button--hyper-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .package__button--hyper-icon-border {
+    width: 371px;
+    height: 121px;
+  }
+  .package__button--hyper-icon-border-sm {
+    display: none;
+  }
+  .package__button--hyper-icon-border-lg {
+    display: inline;
+  }
+}
+.package__button--hyper-span-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 73px;
+  background-color: #000;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button--hyper-span-icon {
+    width: 121px;
+  }
+}
+.package__button--hyper-span-icon svg {
+  stroke: #fff;
+  transition: stroke 0.3s ease;
+}
+.package__button--hyper:hover .package__button--hyper-text, .package__button--hyper:focus-visible .package__button--hyper-text, .package__button--hyper:active .package__button--hyper-text {
+  background-color: #fff;
+}
+.package__button--hyper:hover .package__button--hyper-span-icon svg, .package__button--hyper:focus-visible .package__button--hyper-span-icon svg, .package__button--hyper:active .package__button--hyper-span-icon svg {
+  stroke: #00d0d2;
+}
+.package__button--blast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 73px;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button--blast {
+    height: 121px;
+    gap: 8px;
+  }
+}
+.package__button--blast-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 223px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #000;
+  background: #fff;
+  transition: background-color 0.3s ease;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button--blast-text {
+    width: 371px;
+  }
+}
+.package__button--blast-icon-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 223px;
+  height: 73px;
+}
+.package__button--blast-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .package__button--blast-icon-border {
+    width: 371px;
+    height: 121px;
+  }
+  .package__button--blast-icon-border-sm {
+    display: none;
+  }
+  .package__button--blast-icon-border-lg {
+    display: inline;
+  }
+}
+.package__button--blast-span-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 73px;
+  background-color: #00d0d2;
+}
+@media only screen and (min-width: 1920px) {
+  .package__button--blast-span-icon {
+    width: 121px;
+  }
+}
+.package__button--blast-span-icon svg {
+  stroke: #fff;
+  transition: stroke 0.3s ease;
+}
+.package__button--blast:hover .package__button--blast-text, .package__button--blast:focus-visible .package__button--blast-text, .package__button--blast:active .package__button--blast-text {
+  background-color: #00d0d2;
+}
+.package__button--blast:hover .package__button--blast-span-icon svg, .package__button--blast:focus-visible .package__button--blast-span-icon svg, .package__button--blast:active .package__button--blast-span-icon svg {
+  stroke: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

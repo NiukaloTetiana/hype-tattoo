@@ -55,6 +55,7 @@
   $text-color: variables.$black-text-color,
 
   $bg-color: variables.$accent-color,
+  $bg-text: transparent,
   $icon-color: variables.$black-text-color
 ) {
   position: relative;
@@ -77,7 +78,9 @@
     font-size: 14px;
     line-height: 1;
     letter-spacing: -0.03em;
+    text-transform: uppercase;
     color: $text-color;
+    background: $bg-text;
     transition: background-color variables.$transition-delay
       variables.$transition-type;
     @media only screen and (min-width: 1920px) {
