@@ -1,1 +1,106 @@
-<section id="artist"><div>Artist</div></section>
+<section id="artist" class="artist">
+  <svg class="artist__icon--line">
+    <use href="./images/icons.svg#icon-line"></use>
+  </svg>
+  <div class="container">
+    <ul class="artist__list">
+      <li class="artist__item artist__color--accent">
+        <div class="artist__wrapper">
+          <p>Demus</p>
+          <span>01</span>
+        </div>
+      </li>
+      <li class="artist__item">
+        <div class="artist__wrapper">
+          <p>Ruslan</p>
+          <span>02</span>
+        </div>
+      </li>
+      <li class="artist__item">
+        <div class="artist__wrapper">
+          <p>David</p>
+          <span>03</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="artist__who--wrapper">
+      <h5 class="artist__name">DEMUS</h5>
+      <span class="artist__span--style">Who i&#8217;m</span>
+    </div>
+
+    <div class="artist__wrapper--img">
+      <picture>
+        <source
+          media="(min-width:1440px)"
+          srcset="
+            ./images/artist/demus_desktop_1x.jpg 1x,
+            ./images/artist/demus_desktop_2x.jpg 2x
+          "
+          type="image/jpg"
+          width="625"
+          height="900"
+        />
+
+        <source
+          media="(max-width:767.99px)"
+          srcset="
+            ./images/artist/demus_mobile_1x.jpg 1x,
+            ./images/artist/demus_mobile_2x.jpg 2x
+          "
+          type="image/jpg"
+          width="303"
+          height="437"
+        />
+        <img
+          class="artist__img"
+          src="./images/artist/demus_mobile_1x.jpg"
+          alt="Demus photo"
+          width="303"
+          height="437"
+        />
+      </picture>
+
+      <ul class="artist__list--button">
+        <li>
+          <button type="button" class="artist__button">
+            <svg
+              height="11"
+              width="13"
+              class="artist__icon--arrow artist__icon--rotate"
+            >
+              <use href="./images/icons.svg#icon-arrow-sideward"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="artist__button">
+            <svg height="11" width="13" class="artist__icon--arrow">
+              <use href="./images/icons.svg#icon-arrow-sideward"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="artist__expirience--wrapper">
+      <h5 class="artist__name">8 years</h5>
+      <span class="artist__span--style">Expirience</span>
+    </div>
+
+    <div class="artist__style--wrapper">
+      <span class="artist__span--style artist__width">Tattoo style</span>
+      <h5 class="artist__name artist__left">Chicano, Realism and Japanese</h5>
+    </div>
+
+    <h4 class="artist__title">About me</h4>
+    <p class="artist__text">
+      With 8 years in the tattoo industry, I have developed my style and
+      I&#8217;m ready to translate your ideas into unique works of art that will
+      accentuate and complement your image. Quality service is my top priority
+      and my main goal is to fuck the North American tattoo industry, so you
+      have a chance to get a tattoo from a future legend without waiting years
+      for your turn.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,198 @@
+@use "./variables";
+@use "./mixins";
+
+.artist {
+  position: relative;
+  background-color: variables.$black-text-color;
+  padding-block: 76px 46px;
+
+  &__icon--line {
+    position: absolute;
+    top: 21px;
+    left: -13px;
+    width: 390px;
+    height: 65px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 14px;
+  }
+
+  &__item {
+    position: relative;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+    color: variables.$white-text-color;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      right: 3px;
+      width: 0.52px;
+      height: 16px;
+      background-color: variables.$white-text-color;
+    }
+  }
+
+  &__color--accent {
+    color: variables.$accent-color;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+  }
+
+  &__who--wrapper {
+    position: relative;
+    padding-left: 11px;
+    width: 153px;
+    margin-bottom: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 116px;
+      width: 0.7px;
+      height: 47px;
+      background-color: variables.$white-text-color;
+      transform: rotate(138deg);
+    }
+
+    span {
+      position: absolute;
+      top: -10px;
+      right: -11px;
+    }
+  }
+
+  &__span--style {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: variables.$white-text-color;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.11;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: variables.$white-text-color;
+  }
+
+  &__wrapper--img {
+    position: relative;
+  }
+
+  &__img {
+    margin-inline: auto;
+  }
+
+  &__list--button {
+    position: absolute;
+    top: 163px;
+    left: 0;
+    width: 100%;
+
+    @include mixins.flex-between;
+  }
+
+  &__button {
+    @include mixins.flex-center;
+    width: 48px;
+    height: 48px;
+    background-color: variables.$accent-color;
+  }
+
+  &__icon--arrow {
+    stroke: variables.$black-text-color;
+    fill: variables.$black-text-color;
+    transform: rotate(45deg);
+  }
+
+  &__icon--rotate {
+    transform: rotate(225deg);
+  }
+
+  &__expirience--wrapper {
+    position: relative;
+    margin-left: -9px;
+    width: 187px;
+    margin-bottom: 17px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 3px;
+      left: 115px;
+      width: 0.7px;
+      height: 47px;
+      background-color: variables.$white-text-color;
+      transform: rotate(138deg);
+    }
+
+    span {
+      position: absolute;
+      top: -12px;
+      right: 5px;
+    }
+  }
+
+  &__style--wrapper {
+    position: relative;
+    margin-left: auto;
+    width: 176px;
+    margin-bottom: 7px;
+  }
+
+  &__left {
+    text-align: end;
+  }
+
+  &__width {
+    display: block;
+    width: 41px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 69px;
+      left: 45px;
+      width: 0.69px;
+      height: 29px;
+      background-color: variables.$white-text-color;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: variables.$white-text-color;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.77;
+    letter-spacing: -0.03em;
+    color: variables.$white-text-color;
+    width: 320px;
+  }
+}
