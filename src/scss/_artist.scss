@@ -6,12 +6,32 @@
   background-color: variables.$black-text-color;
   padding-block: 76px 46px;
 
+  &__container {
+    padding-inline: 0;
+  }
+
   &__icon--line {
     position: absolute;
     top: 21px;
     left: -13px;
     width: 390px;
     height: 65px;
+  }
+
+  &__slider--container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__slider--list {
+    @include mixins.flex-start;
+    gap: 20px;
+    width: calc(100% * 3 + 40px);
+    transition: transform 0.5s ease;
+  }
+
+  &__slider--item {
+    width: 100%;
   }
 
   &__list {
@@ -102,9 +122,9 @@
 
   &__list--button {
     position: absolute;
-    top: 163px;
-    left: 0;
-    width: 100%;
+    top: 372px;
+    left: 20px;
+    width: 335px;
 
     @include mixins.flex-between;
   }

@@ -1783,12 +1783,29 @@ summary {
   background-color: #000;
   padding-block: 76px 46px;
 }
+.artist__container {
+  padding-inline: 0;
+}
 .artist__icon--line {
   position: absolute;
   top: 21px;
   left: -13px;
   width: 390px;
   height: 65px;
+}
+.artist__slider--container {
+  width: 100%;
+  overflow: hidden;
+}
+.artist__slider--list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: calc(300% + 40px);
+  transition: transform 0.5s ease;
+}
+.artist__slider--item {
+  width: 100%;
 }
 .artist__list {
   display: flex;
@@ -1866,9 +1883,9 @@ summary {
 }
 .artist__list--button {
   position: absolute;
-  top: 163px;
-  left: 0;
-  width: 100%;
+  top: 372px;
+  left: 20px;
+  width: 335px;
   display: flex;
   align-items: center;
   justify-content: space-between;
