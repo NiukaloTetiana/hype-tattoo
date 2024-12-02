@@ -1960,27 +1960,76 @@ summary {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-align: center;
-  width: 370px;
+  width: 355px;
   margin-bottom: 44px;
 }
 .feedback__title span {
   white-space: nowrap;
 }
 .feedback__list {
-  width: 287px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 343px;
+  height: 446px;
   margin-inline: auto;
   margin-bottom: 66px;
 }
 .feedback__list__item {
-  position: relative;
-  z-index: 1;
+  position: absolute;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 114px 30px 32px;
-  width: 100%;
+  width: 287px;
   height: 420px;
   background-color: #00d0d2;
+  transition: transform 0.5s ease;
+}
+.feedback__list__item:nth-child(2) {
+  transform: rotate(-4deg);
+  background-color: #14d0d2;
+}
+.feedback__list__item:nth-child(3) {
+  transform: rotate(4deg);
+  background-color: #00b2b4;
+}
+.feedback__list__item:nth-child(4) {
+  transform: rotate(-6deg);
+  background-color: #00c6c8;
+}
+.feedback__list__item:nth-child(5) {
+  transform: rotate(-4deg);
+  background-color: #14d0d2;
+}
+.feedback__list__item:nth-child(6) {
+  transform: rotate(4deg);
+  background-color: #00b2b4;
+}
+.feedback__list__item:nth-child(7) {
+  transform: rotate(-6deg);
+  background-color: #00c6c8;
+}
+.feedback__list__item:nth-child(8) {
+  transform: rotate(-4deg);
+  background-color: #14d0d2;
+}
+.feedback__list__item:nth-child(9) {
+  transform: rotate(4deg);
+  background-color: #00b2b4;
+}
+.feedback__list__item:nth-child(10) {
+  transform: rotate(-6deg);
+  background-color: #00c6c8;
+}
+.feedback__list__item.active {
+  z-index: 10;
+  transform: rotate(0deg);
+  background-color: #00d0d2;
+}
+.feedback__list__item.behind {
+  z-index: 5;
 }
 .feedback__icon {
   position: absolute;
@@ -2018,12 +2067,98 @@ summary {
   width: 60px;
   height: 60px;
   background-color: #00d0d2;
+  transition: background-color 0.3s ease, stroke 0.3s ease;
+}
+.feedback__button:hover, .feedback__button:focus-visible, .feedback__button:active {
+  background: #000;
+}
+.feedback__button:hover svg, .feedback__button:focus-visible svg, .feedback__button:active svg {
+  stroke: #00d0d2;
 }
 .feedback__icon--arrow {
   stroke: #000;
 }
 .feedback__icon--rotate {
   transform: rotate(180deg);
+}
+.feedback__button--course {
+  margin-inline: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 67px;
+}
+@media only screen and (min-width: 1920px) {
+  .feedback__button--course {
+    height: 104px;
+    gap: 4px;
+  }
+}
+.feedback__button--course-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 176px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #000;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+@media only screen and (min-width: 1920px) {
+  .feedback__button--course-text {
+    width: 320px;
+  }
+}
+.feedback__button--course-icon-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 176px;
+  height: 67px;
+}
+.feedback__button--course-icon-border-lg {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .feedback__button--course-icon-border {
+    width: 320px;
+    height: 104px;
+  }
+  .feedback__button--course-icon-border-sm {
+    display: none;
+  }
+  .feedback__button--course-icon-border-lg {
+    display: inline;
+  }
+}
+.feedback__button--course-span-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 67px;
+  background-color: #00d0d2;
+}
+@media only screen and (min-width: 1920px) {
+  .feedback__button--course-span-icon {
+    width: 104px;
+  }
+}
+.feedback__button--course-span-icon svg {
+  stroke: #000;
+  transition: stroke 0.3s ease;
+}
+.feedback__button--course:hover .feedback__button--course-text, .feedback__button--course:focus-visible .feedback__button--course-text, .feedback__button--course:active .feedback__button--course-text {
+  background-color: #00d0d2;
+}
+.feedback__button--course:hover .feedback__button--course-span-icon svg, .feedback__button--course:focus-visible .feedback__button--course-span-icon svg, .feedback__button--course:active .feedback__button--course-span-icon svg {
+  stroke: #fff;
 }
 
 .faq {

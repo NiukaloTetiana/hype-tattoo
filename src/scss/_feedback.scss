@@ -1,0 +1,152 @@
+@use "./variables";
+@use "./mixins";
+
+.feedback {
+  padding: 46px 10px 73px;
+
+  &__title {
+    @include mixins.title;
+    text-align: center;
+    width: 355px;
+    margin-bottom: 44px;
+
+    span {
+      white-space: nowrap;
+    }
+  }
+
+  &__list {
+    position: relative;
+    @include mixins.flex-center;
+    width: 343px;
+    height: 446px;
+    margin-inline: auto;
+    margin-bottom: 66px;
+
+    &__item {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 114px 30px 32px;
+      width: 287px;
+      height: 420px;
+      background-color: variables.$accent-color;
+      transition: transform 0.5s ease;
+
+      @for $i from 2 through 10 {
+        @if ($i % 3 == 2) {
+          &:nth-child(#{$i}) {
+            transform: rotate(-4deg);
+            background-color: #14d0d2;
+          }
+        } @else if($i % 3 == 0) {
+          &:nth-child(#{$i}) {
+            transform: rotate(4deg);
+
+            background-color: #00b2b4;
+          }
+        } @else if($i % 3 == 1) {
+          &:nth-child(#{$i}) {
+            transform: rotate(-6deg);
+            background-color: #00c6c8;
+          }
+        }
+      }
+      &.active {
+        z-index: 10;
+        transform: rotate(0deg);
+        background-color: variables.$accent-color;
+      }
+      &.behind {
+        z-index: 5;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: -1;
+    fill: variables.$icon-color;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    color: variables.$white-text-color;
+  }
+
+  &__text-lh {
+    line-height: 1.33;
+  }
+
+  &__wrapper {
+    @include mixins.flex-start;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  &__list--button {
+    @include mixins.flex-center;
+    gap: 12px;
+    margin-bottom: 43px;
+  }
+
+  &__button {
+    @include mixins.flex-center;
+    width: 60px;
+    height: 60px;
+    background-color: variables.$accent-color;
+    transition: background-color variables.$transition-delay
+        variables.$transition-type,
+      stroke variables.$transition-delay variables.$transition-type;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      background: variables.$black-text-color;
+      svg {
+        stroke: variables.$accent-color;
+      }
+    }
+  }
+
+  &__icon--arrow {
+    stroke: variables.$black-text-color;
+  }
+
+  &__icon--rotate {
+    transform: rotate(180deg);
+  }
+
+  &__button--course {
+    margin-inline: auto;
+
+    @include mixins.button(
+      $btn-height-sm: 67px,
+      $btn-height-lg: 104px,
+      $gap-sm: 3px,
+      $gap-lg: 4px,
+      $text-width-sm: 176px,
+      $text-width-lg: 320px,
+      $text-color: variables.$black-text-color,
+      $bg-color: variables.$accent-color,
+      $icon-color: variables.$black-text-color
+    );
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      .feedback__button--course-text {
+        background-color: variables.$accent-color;
+      }
+
+      .feedback__button--course-span-icon svg {
+        stroke: variables.$white-text-color;
+      }
+    }
+  }
+}
