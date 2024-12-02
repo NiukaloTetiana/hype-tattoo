@@ -4,7 +4,7 @@
 .artist {
   position: relative;
   background-color: variables.$black-text-color;
-  padding-block: 76px 46px;
+  padding-block: 76px 86px;
 
   &__container {
     padding-inline: 0;
@@ -19,14 +19,16 @@
   }
 
   &__slider--container {
-    width: 100%;
     overflow: hidden;
+    padding-left: 10px;
+    margin-left: -10px;
+    width: 342px;
   }
 
   &__slider--list {
     @include mixins.flex-start;
-    gap: 20px;
-    width: calc(100% * 3 + 40px);
+    gap: 18px;
+    width: calc(100% * 3 + 36px);
     transition: transform 0.5s ease;
   }
 
@@ -72,8 +74,8 @@
 
   &__who--wrapper {
     position: relative;
-    padding-left: 11px;
-    width: 153px;
+    text-align: end;
+    width: 103px;
     margin-bottom: 10px;
 
     &::after {
@@ -90,7 +92,7 @@
     span {
       position: absolute;
       top: -10px;
-      right: -11px;
+      right: -61px;
     }
   }
 
@@ -134,6 +136,14 @@
     width: 48px;
     height: 48px;
     background-color: variables.$accent-color;
+    transition: background-color variables.$transition-delay
+      variables.$transition-type;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      background-color: variables.$white-text-color;
+    }
   }
 
   &__icon--arrow {
@@ -174,27 +184,48 @@
     position: relative;
     margin-left: auto;
     width: 176px;
-    margin-bottom: 7px;
-  }
-
-  &__left {
-    text-align: end;
-  }
-
-  &__width {
-    display: block;
-    width: 41px;
+    margin-bottom: 4px;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: 69px;
+      bottom: 67px;
       left: 45px;
       width: 0.69px;
       height: 29px;
       background-color: variables.$white-text-color;
       transform: rotate(45deg);
     }
+  }
+
+  &__style--wrapper--ruslan {
+    margin-bottom: 17px;
+
+    &::after {
+      bottom: 40px;
+    }
+  }
+
+  &__style--wrapper--david {
+    margin-bottom: 31px;
+
+    &::after {
+      bottom: 67px;
+    }
+  }
+
+  &__left {
+    text-align: end;
+    margin-left: auto;
+  }
+
+  &__text--width {
+    width: 137px;
+  }
+
+  &__width {
+    display: block;
+    width: 41px;
   }
 
   &__title {
@@ -204,7 +235,7 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: variables.$white-text-color;
-    margin-bottom: 16px;
+    margin-bottom: 19px;
   }
 
   &__text {
