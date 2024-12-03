@@ -2,9 +2,14 @@
 @use "./mixins";
 
 .about {
+  background: linear-gradient(
+    to bottom,
+    variables.$accent-color 60%,
+    transparent 60%
+  );
+
   &__container {
-    padding-block: 66px;
-    background-color: variables.$accent-color;
+    padding-block: 65px;
   }
 
   &__icon {

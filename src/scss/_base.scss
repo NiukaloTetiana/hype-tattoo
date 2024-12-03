@@ -29,6 +29,7 @@ main {
 a {
   text-decoration: none;
   color: currentColor;
+  display: inline-block;
 }
 
 h1,
@@ -54,6 +55,12 @@ button {
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 ul,

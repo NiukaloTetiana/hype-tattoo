@@ -261,6 +261,7 @@
     text-align: center;
     color: variables.$white-text-color;
     margin-bottom: 26px;
+    margin-inline: auto;
   }
 
   &__icon--container {
@@ -277,6 +278,7 @@
   }
 
   &__button--best {
+    width: 228px;
     margin-bottom: 33px;
     margin-inline: auto;
 

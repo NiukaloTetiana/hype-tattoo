@@ -8,6 +8,7 @@
     @include mixins.title;
     text-align: center;
     width: 355px;
+    margin-inline: auto;
     margin-bottom: 44px;
 
     span {
@@ -123,6 +124,7 @@
   }
 
   &__button--course {
+    width: 245px;
     margin-inline: auto;
 
     @include mixins.button(
