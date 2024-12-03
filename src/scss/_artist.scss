@@ -125,7 +125,7 @@
   &__list--button {
     position: absolute;
     top: 372px;
-    left: 20px;
+    left: auto;
     width: 335px;
 
     @include mixins.flex-between;

@@ -7,11 +7,17 @@ const toggleScroll = (shouldBlock) => {
 
 const updateModalContent = (contentKey, title) => {
   const icon = title.toLowerCase();
+
+  const iconPath =
+    process.env.NODE_ENV === "development"
+      ? "./images/icons.svg#icon-"
+      : "/assets/icons-CCWhYS4B.svg#icon-";
+
   const modalContentData = {
     proceed: `<div class="modal__title-wrapper">
       <h4 class="modal__title modal__nomargin">Your plan ${title}</h4>
       <svg class="modal__icon" width="54" height="54">
-        <use href="./images/icons.svg#icon-${icon}"></use>
+        <use href="${iconPath + icon}"></use>
       </svg>
     </div>
     <form class="modal__form" name="reviews-form">
@@ -50,17 +56,17 @@ const updateModalContent = (contentKey, title) => {
         <svg class="modal__button-icon-border">
           <use
             class="modal__button-icon-border-sm"
-            href="./images/icons.svg#icon-package-btn-border-sm-black"
+            href="${iconPath}package-btn-border-sm-black"
           ></use>
           <use
             class="modal__button-icon-border-lg"
-            href="./images/icons.svg#icon-package-btn-border-lg-black"
+            href="${iconPath}package-btn-border-lg-black"
           ></use>
         </svg>
         <span class="modal__button-text">Processed</span>
         <span class="modal__button-span-icon">
           <svg height="13" width="11">
-            <use href="./images/icons.svg#icon-arrow-sideward"></use>
+            <use href="${iconPath}arrow-sideward"></use>
           </svg>
         </span>
       </button>
@@ -106,17 +112,17 @@ const updateModalContent = (contentKey, title) => {
         <svg class="modal__button-icon-border">
           <use
             class="modal__button-icon-border-sm"
-            href="./images/icons.svg#icon-package-btn-border-sm-black"
+            href="${iconPath}package-btn-border-sm-black"
           ></use>
           <use
             class="modal__button-icon-border-lg"
-            href="./images/icons.svg#icon-package-btn-border-lg-black"
+            href="${iconPath}package-btn-border-lg-black"
           ></use>
         </svg>
         <span class="modal__button-text">Consultation</span>
         <span class="modal__button-span-icon">
           <svg height="13" width="11">
-            <use href="./images/icons.svg#icon-arrow-sideward"></use>
+            <use href="${iconPath}arrow-sideward"></use>
           </svg>
         </span>
       </button>
@@ -143,7 +149,7 @@ const handleOpenModalClick = (event) => {
   if (!button) return;
 
   const contentKey = button.getAttribute("data-modal");
-  const title = button.getAttribute("data-title");
+  const title = button.getAttribute("data-title") || "";
   openModal(contentKey, title);
 };
 

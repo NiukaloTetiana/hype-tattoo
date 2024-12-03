@@ -77,6 +77,7 @@ summary {
 }
 
 .container {
+  min-width: 320px;
   max-width: 375px;
   padding: 0 20px;
   margin: 0 auto;
@@ -91,5 +92,23 @@ summary {
 
   @media only screen and (min-width: 1920px) {
     @include mixins.container-max-width(1920px, 74px);
+  }
+}
+
+.container-nopadding {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    @include mixins.container-max-width(768px, 0);
+  }
+
+  @media only screen and (min-width: 1440px) {
+    @include mixins.container-max-width(1440px, 0);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    @include mixins.container-max-width(1920px, 0);
   }
 }

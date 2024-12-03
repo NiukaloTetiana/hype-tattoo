@@ -74,6 +74,7 @@ summary {
 }
 
 .container {
+  min-width: 320px;
   max-width: 375px;
   padding: 0 20px;
   margin: 0 auto;
@@ -94,6 +95,30 @@ summary {
   .container {
     max-width: 1920px;
     padding: 0 74px;
+  }
+}
+
+.container-nopadding {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .container-nopadding {
+    max-width: 768px;
+    padding: 0 0;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container-nopadding {
+    max-width: 1440px;
+    padding: 0 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .container-nopadding {
+    max-width: 1920px;
+    padding: 0 0;
   }
 }
 
@@ -387,7 +412,6 @@ summary {
   padding-top: 51px;
   padding-bottom: 96px;
   background: url("../images/hero/hero_mobile_1x.jpg") no-repeat center top -140px/cover;
-  max-width: 1920px;
   height: 641px;
   margin-inline: auto;
   margin-bottom: 35px;
@@ -1856,7 +1880,7 @@ summary {
 .artist__list--button {
   position: absolute;
   top: 372px;
-  left: 20px;
+  left: auto;
   width: 335px;
   display: flex;
   align-items: center;
