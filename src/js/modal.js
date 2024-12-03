@@ -143,7 +143,7 @@ const handleOpenModalClick = (event) => {
   if (!button) return;
 
   const contentKey = button.getAttribute("data-modal");
-  const title = button.getAttribute("data-title");
+  const title = button.getAttribute("data-title") || "";
   openModal(contentKey, title);
 };
 
