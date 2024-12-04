@@ -52,7 +52,7 @@ const updateModalContent = (contentKey, title) => {
         <label class="modal__form__label" for="user-name">Phone number*</label>
       </div>
 
-      <button class="modal__button" type="button" data-modal-open>
+      <a href="/thank" class="modal__button">
         <svg class="modal__button-icon-border">
           <use
             class="modal__button-icon-border-sm"
@@ -69,7 +69,7 @@ const updateModalContent = (contentKey, title) => {
             <use href="${iconPath}arrow-sideward"></use>
           </svg>
         </span>
-      </button>
+      </a>
     </form>
     <p class="modal__text">
       By sending this form I confirm that I have read and accept the
@@ -108,7 +108,7 @@ const updateModalContent = (contentKey, title) => {
         <label class="modal__form__label" for="user-name">Phone number*</label>
       </div>
 
-      <button class="modal__button" type="button" data-modal-open>
+      <button class="modal__button" type="button">
         <svg class="modal__button-icon-border">
           <use
             class="modal__button-icon-border-sm"
