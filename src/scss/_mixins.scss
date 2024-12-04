@@ -62,7 +62,7 @@
   @include flex-start;
   gap: $gap-sm;
   height: $btn-height-sm;
-  @media only screen and (min-width: 1920px) {
+  @media only screen and (min-width: 1440px) {
     & {
       height: $btn-height-lg;
       gap: $gap-lg;
@@ -83,8 +83,9 @@
     background: $bg-text;
     transition: background-color variables.$transition-delay
       variables.$transition-type;
-    @media only screen and (min-width: 1920px) {
+    @media only screen and (min-width: 1440px) {
       & {
+        font-size: 26px;
         width: $text-width-lg;
       }
     }
@@ -99,7 +100,7 @@
     &-lg {
       display: none;
     }
-    @media (min-width: 1920px) {
+    @media (min-width: 1440px) {
       width: $text-width-lg;
       height: $btn-height-lg;
       &-sm {
@@ -118,15 +119,19 @@
     width: $btn-height-sm;
     background-color: $bg-color;
 
-    @media only screen and (min-width: 1920px) {
-      & {
-        width: $btn-height-lg;
-      }
-    }
-
     svg {
       stroke: $icon-color;
       transition: stroke variables.$transition-delay variables.$transition-type;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      & {
+        width: $btn-height-lg;
+      }
+      svg {
+        width: 21px;
+        height: 24px;
+      }
     }
   }
 }
