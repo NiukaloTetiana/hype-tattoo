@@ -4,6 +4,10 @@
 .gift {
   padding-bottom: 56px;
 
+  @media only screen and (max-width: 374.99px) {
+    padding-bottom: 40px;
+  }
+
   &__img {
     margin-inline: auto;
     margin-bottom: 16px;
@@ -35,10 +39,21 @@
       padding: 8px 12px;
       border-radius: 100px;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      &__item {
+        font-size: 10px;
+        padding: 6px 10px;
+      }
+    }
   }
 
   &__title {
     @include mixins.title;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 58px;
+    }
   }
 
   &__list {
@@ -64,12 +79,24 @@
       line-height: 2;
       letter-spacing: -0.02em;
       text-transform: uppercase;
+
+      @media only screen and (max-width: 374.99px) {
+        font-size: 10px;
+        height: 22px;
+        width: 22px;
+      }
     }
 
     &__text {
       font-weight: 500;
       font-size: 15px;
       width: 240px;
+
+      @media only screen and (max-width: 374.99px) {
+        font-size: 12px;
+        padding: 6px 10px;
+        width: 220px;
+      }
     }
   }
 }

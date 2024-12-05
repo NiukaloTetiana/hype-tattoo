@@ -13,6 +13,17 @@
 
   padding: 32px 44px 30px 32px;
   background-color: transparent;
+
+  @media only screen and (max-width: 374.99px) {
+    width: 300px;
+    height: 490px;
+    padding: 20px;
+
+    &::after {
+      top: 20px;
+    }
+  }
+
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.44);
   }
@@ -45,6 +56,10 @@
     width: 20px;
     height: 30px;
     background-color: variables.$white-text-color;
+
+    @media only screen and (max-width: 374.99px) {
+      top: 20px;
+    }
   }
 
   &__content {
@@ -71,6 +86,16 @@
     position: absolute;
     top: 0;
     right: 28px;
+
+    @media only screen and (max-width: 374.99px) {
+      top: -3px;
+      right: 10px;
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
   }
 
   &__icon {
@@ -85,6 +110,11 @@
     svg {
       fill: variables.$black-text-color;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      gap: 12px;
+      margin-bottom: 28px;
+    }
   }
 
   &__title {
@@ -94,6 +124,11 @@
     letter-spacing: -0.02em;
     color: variables.$dark-text-color;
     margin-bottom: 54px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 26px;
+      margin-bottom: 38px;
+    }
   }
 
   &__nomargin {
@@ -106,6 +141,14 @@
 
     &:nth-last-child(2) {
       margin-bottom: 41px;
+    }
+
+    @media only screen and (max-width: 374.99px) {
+      margin-bottom: 36px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 28px;
     }
   }
 
@@ -125,6 +168,10 @@
       line-height: 1;
       transition: all 0.3s ease;
       pointer-events: none;
+
+      @media only screen and (max-width: 374.99px) {
+        font-size: 16px;
+      }
     }
 
     &__input {
@@ -144,6 +191,11 @@
         font-size: 14px;
         font-weight: 500;
         color: variables.$accent-color;
+      }
+
+      @media only screen and (max-width: 374.99px) {
+        height: 46px;
+        font-size: 18px;
       }
     }
   }
@@ -177,6 +229,29 @@
         stroke: variables.$black-text-color;
       }
     }
+
+    @media only screen and (max-width: 374.99px) {
+      width: 233px;
+      height: 56px;
+      margin-bottom: 20px;
+
+      .modal__button-icon-border {
+        width: 173px;
+        height: 56px;
+      }
+      .modal__button-text {
+        font-size: 12px;
+      }
+      .modal__button-span-icon {
+        width: 56px;
+        height: 56px;
+
+        svg {
+          width: 11px;
+          height: 13px;
+        }
+      }
+    }
   }
 
   &__text {
@@ -191,6 +266,11 @@
       text-decoration: underline;
       text-decoration-skip-ink: none;
       color: variables.$accent-color;
+    }
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 10px;
+      width: 210px;
     }
   }
 }

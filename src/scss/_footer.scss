@@ -15,7 +15,10 @@
     letter-spacing: -0.02em;
     color: variables.$white-text-color;
     text-align: center;
-    margin-bottom: 39px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 100px;
+    }
   }
 
   &__wrapper {
@@ -29,6 +32,10 @@
     letter-spacing: -0.02em;
     color: variables.$white-text-color;
     margin-bottom: 2px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+    }
   }
 
   &__link {
@@ -38,6 +45,10 @@
     line-height: 1;
     letter-spacing: -0.02em;
     color: variables.$white-text-color;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 22px;
+    }
   }
 
   &__link-mail {
@@ -48,6 +59,10 @@
 
   &__link-social {
     margin-bottom: 44px;
+
+    @media only screen and (max-width: 374.99px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__address {
@@ -56,6 +71,12 @@
     gap: 18px 53px;
     margin-bottom: 44px;
     padding-right: 41px;
+
+    @media only screen and (max-width: 374.99px) {
+      gap: 14px 48px;
+      margin-bottom: 44px;
+      padding-right: 18px;
+    }
   }
 
   &__address-wrapper {
@@ -63,6 +84,8 @@
   }
 
   &__button {
+    width: 243px;
+    margin-bottom: 44px;
     @include mixins.button(
       $btn-height-sm: 49px,
       $btn-height-lg: 121px,
@@ -74,10 +97,6 @@
       $bg-color: variables.$black-text-color,
       $icon-color: variables.$white-text-color
     );
-  }
-
-  &__button {
-    margin-bottom: 44px;
 
     &:hover,
     &:focus-visible,
@@ -90,6 +109,20 @@
         stroke: variables.$accent-color;
       }
     }
+
+    @media only screen and (max-width: 374.99px) {
+      width: 225px;
+      .footer__button-icon-border {
+        width: 174px;
+        height: 49px;
+      }
+
+      .footer__button-span-icon {
+        width: 47px;
+        height: 47px;
+      }
+      margin-bottom: 30px;
+    }
   }
 
   &__text {
@@ -98,9 +131,17 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: variables.$white-text-color;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 16px;
+    }
   }
 
   &__copyright {
     @include mixins.copyright();
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+    }
   }
 }

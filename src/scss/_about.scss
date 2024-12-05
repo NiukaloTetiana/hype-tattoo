@@ -10,6 +10,10 @@
 
   &__container {
     padding-block: 65px;
+
+    @media only screen and (max-width: 374.99px) {
+      padding-block: 40px;
+    }
   }
 
   &__icon {
@@ -20,12 +24,21 @@
 
   &__margin {
     margin-bottom: 33px;
+
+    @media only screen and (max-width: 374.99px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__title {
     @include mixins.title;
     text-align: center;
     margin-bottom: 22px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 58px;
+      margin-bottom: 18px;
+    }
   }
 
   &__subtitle {
@@ -39,6 +52,12 @@
     width: 338px;
     margin-inline: auto;
     margin-bottom: 22px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 30px;
+      width: 280px;
+      margin-bottom: 18px;
+    }
   }
 
   &__text {
@@ -50,11 +69,21 @@
     color: variables.$dark-text-color;
     width: 210px;
     margin-inline: auto;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+      width: 180px;
+    }
   }
 
   &__img {
     margin-inline: auto;
-    max-width: 375px;
-    max-height: 446px;
+    width: 375px;
+    height: 446px;
+
+    @media only screen and (max-width: 374.99px) {
+      width: 320px;
+    }
+    height: 390px;
   }
 }

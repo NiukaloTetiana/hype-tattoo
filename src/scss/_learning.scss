@@ -28,6 +28,10 @@
     @include mixins.title;
     text-align: center;
     padding-top: 44px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 58px;
+    }
   }
 
   &__slider--wrapper {
@@ -79,6 +83,26 @@
       line-height: 1.5;
       letter-spacing: -0.03em;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      width: 300px;
+      height: 300px;
+
+      svg {
+        width: 56px;
+        height: 55px;
+        margin-bottom: 40px;
+      }
+
+      &__title {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      &__text {
+        font-size: 12px;
+      }
+    }
   }
 
   &__slider--control {
@@ -103,6 +127,17 @@
     #learning-slide#{$i}:checked ~ &__slider--control #learning-label#{$i} {
       width: 33px;
       background-color: variables.$accent-color;
+    }
+  }
+
+  @media only screen and (max-width: 374.99px) {
+    @for $i from 1 through 5 {
+      #learning-slide#{$i}:checked ~ &__slider--container &__list {
+        transform: translateX(calc(-310px * ($i - 1)));
+      }
+      #learning-slide#{$i}:checked ~ &__slider--control #learning-label#{$i} {
+        width: 30px;
+      }
     }
   }
 }

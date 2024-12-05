@@ -63,10 +63,8 @@
   gap: $gap-sm;
   height: $btn-height-sm;
   @media only screen and (min-width: 1440px) {
-    & {
-      height: $btn-height-lg;
-      gap: $gap-lg;
-    }
+    height: $btn-height-lg;
+    gap: $gap-lg;
   }
 
   &-text {
@@ -83,11 +81,15 @@
     background: $bg-text;
     transition: background-color variables.$transition-delay
       variables.$transition-type;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 14px;
+      width: 175px;
+    }
+
     @media only screen and (min-width: 1440px) {
-      & {
-        font-size: 26px;
-        width: $text-width-lg;
-      }
+      font-size: 26px;
+      width: $text-width-lg;
     }
   }
 
@@ -125,9 +127,8 @@
     }
 
     @media only screen and (min-width: 1440px) {
-      & {
-        width: $btn-height-lg;
-      }
+      width: $btn-height-lg;
+
       svg {
         width: 21px;
         height: 24px;

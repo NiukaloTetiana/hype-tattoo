@@ -7,6 +7,11 @@
   &__title {
     @include mixins.title;
     margin-bottom: 34px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 58px;
+      margin-bottom: 24px;
+    }
   }
 
   &__wrapper--item {
@@ -14,6 +19,10 @@
     padding-block: 22px;
     border-top: 1px solid #414141;
     height: 77px;
+
+    @media only screen and (max-width: 374.99px) {
+      height: 58px;
+    }
   }
 
   &__text {
@@ -21,6 +30,11 @@
     font-size: 14px;
     line-height: 1.2;
     width: 252px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+      width: 232px;
+    }
   }
 
   &__span {
@@ -29,10 +43,20 @@
     border: 1.27px solid #414141;
     width: 33px;
     height: 33px;
+
+    @media only screen and (max-width: 374.99px) {
+      width: 23px;
+      height: 23px;
+    }
   }
 
   &__icon {
     fill: variables.$black-text-color;
     stroke: none;
+
+    @media only screen and (max-width: 374.99px) {
+      width: 10px;
+      height: 10px;
+    }
   }
 }

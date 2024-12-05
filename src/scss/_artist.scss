@@ -6,6 +6,10 @@
   background-color: variables.$black-text-color;
   padding-block: 76px 86px;
 
+  @media only screen and (max-width: 374.99px) {
+    padding-block: 56px 66px;
+  }
+
   &__container {
     padding-inline: 0;
   }
@@ -16,6 +20,11 @@
     left: -13px;
     width: 390px;
     height: 65px;
+
+    @media only screen and (max-width: 374.99px) {
+      top: 5px;
+      left: -70px;
+    }
   }
 
   &__slider--container {
@@ -23,6 +32,10 @@
     padding-left: 10px;
     margin-left: -10px;
     width: 342px;
+
+    @media only screen and (max-width: 374.99px) {
+      width: 280px;
+    }
   }
 
   &__slider--list {
@@ -41,6 +54,10 @@
     flex-direction: column;
     gap: 21px;
     margin-bottom: 14px;
+
+    @media only screen and (max-width: 374.99px) {
+      width: 280px;
+    }
   }
 
   &__item {
@@ -87,6 +104,11 @@
       height: 47px;
       background-color: variables.$white-text-color;
       transform: rotate(138deg);
+
+      @media only screen and (max-width: 374.99px) {
+        bottom: 5px;
+        height: 33px;
+      }
     }
 
     span {
@@ -112,6 +134,10 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: variables.$white-text-color;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 20px;
+    }
   }
 
   &__wrapper--img {
@@ -120,6 +146,11 @@
 
   &__img {
     margin-inline: auto;
+
+    @media only screen and (max-width: 374.99px) {
+      height: 360px;
+      width: 250px;
+    }
   }
 
   &__list--button {
@@ -129,6 +160,11 @@
     width: 335px;
 
     @include mixins.flex-between;
+
+    @media only screen and (max-width: 374.99px) {
+      top: 320px;
+      width: 280px;
+    }
   }
 
   &__button {
@@ -143,6 +179,11 @@
     &:focus-visible,
     &:active {
       background-color: variables.$white-text-color;
+    }
+
+    @media only screen and (max-width: 374.99px) {
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -178,6 +219,16 @@
       top: -12px;
       right: 5px;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      margin-left: 12px;
+      width: 157px;
+
+      &::after {
+        left: 92px;
+        height: 37px;
+      }
+    }
   }
 
   &__style--wrapper {
@@ -195,6 +246,15 @@
       height: 29px;
       background-color: variables.$white-text-color;
       transform: rotate(45deg);
+    }
+
+    @media only screen and (max-width: 374.99px) {
+      width: 157px;
+
+      &::after {
+        bottom: 34px;
+        left: 46px;
+      }
     }
   }
 
@@ -236,6 +296,10 @@
     text-transform: uppercase;
     color: variables.$white-text-color;
     margin-bottom: 19px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 30px;
+    }
   }
 
   &__text {
@@ -245,5 +309,10 @@
     letter-spacing: -0.03em;
     color: variables.$white-text-color;
     width: 320px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+      width: 260px;
+    }
   }
 }

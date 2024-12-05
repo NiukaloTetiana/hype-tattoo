@@ -4,6 +4,10 @@
 .programm {
   &__container {
     margin-bottom: 57px;
+
+    @media only screen and (max-width: 374.99px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
@@ -26,6 +30,10 @@
       &:has(details[open]) {
         padding-bottom: 40px;
       }
+    }
+
+    @media only screen and (max-width: 374.99px) {
+      padding-block: 15px 10px;
     }
   }
 
@@ -66,10 +74,25 @@
       font-weight: 500;
       font-size: 18px;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      &__label {
+        padding: 4px 8px;
+        font-size: 8px;
+      }
+
+      &__title {
+        font-size: 16px;
+      }
+    }
   }
 
   &__number {
     padding-inline: 8px;
+
+    @media only screen and (max-width: 374.99px) {
+      padding-inline: 6px;
+    }
   }
 
   &__img--meeting {
@@ -96,6 +119,11 @@
     width: 250px;
     margin-inline: auto;
     margin-bottom: 28px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 58px;
+      margin-bottom: 16px;
+    }
   }
 
   &__subtitle {
@@ -105,6 +133,10 @@
     letter-spacing: -0.03em;
     text-align: center;
     margin-bottom: 7px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -114,6 +146,11 @@
     letter-spacing: -0.03em;
     text-align: center;
     margin-bottom: 68px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+      margin-bottom: 40px;
+    }
   }
 
   &__wrapper {
@@ -131,6 +168,19 @@
       line-height: 1;
       letter-spacing: -0.03em;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      margin-bottom: 12px;
+
+      svg {
+        width: 30px;
+        height: 22px;
+      }
+
+      &__title {
+        font-size: 16px;
+      }
+    }
   }
 
   &__description {
@@ -140,12 +190,22 @@
     letter-spacing: -0.03em;
     margin-bottom: 24px;
     width: 290px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+      width: 240px;
+      margin-bottom: 22px;
+    }
   }
 
   &__img--block {
     @include mixins.flex-start;
     gap: 17px;
     margin-bottom: 30px;
+
+    @media only screen and (max-width: 374.99px) {
+      margin-bottom: 22px;
+    }
   }
 
   &__name {
@@ -157,6 +217,7 @@
   }
 
   &__button {
+    width: 245px;
     @include mixins.button(
       $btn-height-sm: 67px,
       $btn-height-lg: 104px,
@@ -185,10 +246,9 @@
   &__img--container {
     background-color: variables.$black-text-color;
     position: relative;
-    padding-top: 66px;
     isolation: isolate;
     overflow: hidden;
-    padding-bottom: 79px;
+    padding-block: 66px 79px;
 
     &::before,
     &::after {
@@ -218,6 +278,16 @@
       fill: variables.$white-text-color;
       margin-bottom: 64px;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      padding-block: 40px 49px;
+
+      &__icon {
+        width: 260px;
+        height: 40px;
+        margin-bottom: 44px;
+      }
+    }
   }
 
   &__img--wrapper {
@@ -227,6 +297,11 @@
     max-width: 1059px;
     height: 332px;
     margin-bottom: 43px;
+
+    @media only screen and (max-width: 374.99px) {
+      height: 280px;
+      margin-bottom: 33px;
+    }
 
     @media only screen and (max-width: 1439.99px) and (min-device-pixel-ratio: 2),
       (max-width: 767px) and (min-resolution: 192dpi) {
@@ -249,19 +324,29 @@
       color: variables.$white-text-color;
       mix-blend-mode: color-dodge;
       padding-top: 243px;
+
+      @media only screen and (max-width: 374.99px) {
+        font-size: 48px;
+        padding-top: 200px;
+      }
     }
   }
 
   &__img--text {
-    width: 316px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: -0.03em;
     text-align: center;
     color: variables.$white-text-color;
+    width: 316px;
     margin-bottom: 26px;
     margin-inline: auto;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 16px;
+      width: 280px;
+    }
   }
 
   &__icon--container {

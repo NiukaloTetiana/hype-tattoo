@@ -4,6 +4,10 @@
 .hero {
   padding-bottom: 57px;
 
+  @media only screen and (max-width: 374.99px) {
+    padding-bottom: 40px;
+  }
+
   &__text-container {
     @include mixins.flex-start;
     gap: 12px;
@@ -15,7 +19,6 @@
     padding-bottom: 96px;
     background: url("../images/hero/hero_mobile_1x.jpg") no-repeat center top -140px /
       cover;
-    // max-width: 1920px;
     height: 641px;
     margin-inline: auto;
     margin-bottom: 35px;
@@ -63,6 +66,10 @@
 
     width: 260px;
     margin-bottom: 51px;
+
+    @media only screen and (max-width: 374.99px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__title-span {
@@ -71,6 +78,7 @@
   }
 
   &__button {
+    width: 245px;
     @include mixins.button();
 
     &:hover,
@@ -143,6 +151,18 @@
       right: 30px;
       fill: variables.$black-text-color;
     }
+
+    @media only screen and (max-width: 374.99px) {
+      &__title {
+        font-size: 38px;
+        margin-bottom: 25px;
+      }
+
+      &__text {
+        font-size: 12px;
+        width: 220px;
+      }
+    }
   }
 
   &__container--black {
@@ -166,6 +186,13 @@
 
     svg {
       fill: variables.$white-text-color;
+    }
+
+    @media only screen and (max-width: 374.99px) {
+      &__text {
+        font-size: 12px;
+        width: 220px;
+      }
     }
   }
 }

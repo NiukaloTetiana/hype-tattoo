@@ -4,12 +4,22 @@
 .feedback {
   padding: 46px 10px 73px;
 
+  @media only screen and (max-width: 374.99px) {
+    padding: 32px 10px 43px;
+  }
+
   &__title {
     @include mixins.title;
     text-align: center;
     width: 355px;
     margin-inline: auto;
     margin-bottom: 44px;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 58px;
+      width: 280px;
+      margin-bottom: 40px;
+    }
 
     span {
       white-space: nowrap;
@@ -63,6 +73,18 @@
         z-index: 5;
       }
     }
+
+    @media only screen and (max-width: 374.99px) {
+      width: 244px;
+      height: 370px;
+      margin-bottom: 46px;
+
+      &__item {
+        padding: 92px 20px 22px;
+        width: 267px;
+        height: 370px;
+      }
+    }
   }
 
   &__icon {
@@ -71,6 +93,11 @@
     right: 8px;
     z-index: -1;
     fill: variables.$icon-color;
+
+    @media only screen and (max-width: 374.99px) {
+      width: 130px;
+      height: 100px;
+    }
   }
 
   &__text {
@@ -78,6 +105,10 @@
     font-size: 14px;
     line-height: 1.2;
     color: variables.$white-text-color;
+
+    @media only screen and (max-width: 374.99px) {
+      font-size: 12px;
+    }
   }
 
   &__text-lh {
@@ -109,8 +140,19 @@
     &:focus-visible,
     &:active {
       background: variables.$black-text-color;
+
       svg {
         stroke: variables.$accent-color;
+      }
+    }
+
+    @media only screen and (max-width: 374.99px) {
+      width: 48px;
+      height: 48px;
+
+      svg {
+        width: 14px;
+        height: 14px;
       }
     }
   }
