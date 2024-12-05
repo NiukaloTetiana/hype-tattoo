@@ -8,6 +8,13 @@ export default defineConfig({
   build: {
     outDir: "../dist",
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "src/index.html"),
+        thank: resolve(__dirname, "src/thank.html"),
+        notFound: resolve(__dirname, "src/not-found.html"),
+      },
+    },
   },
   plugins: [
     handlebars({

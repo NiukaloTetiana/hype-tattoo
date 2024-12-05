@@ -1,3 +1,5 @@
+import icons from "../images/icons.svg";
+
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modal-content");
 
@@ -8,10 +10,7 @@ const toggleScroll = (shouldBlock) => {
 const updateModalContent = (contentKey, title) => {
   const icon = title.toLowerCase();
 
-  const iconPath =
-    process.env.NODE_ENV === "development"
-      ? "./images/icons.svg#icon-"
-      : "/assets/icons-zDBdPGNK.svg#icon-";
+  const iconPath = icons + "#icon-";
 
   const modalContentData = {
     proceed: `<div class="modal__title-wrapper">

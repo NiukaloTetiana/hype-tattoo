@@ -5,12 +5,12 @@
       "destination": "/thank.html"
     },
     {
-      "source": "/not-found",
-      "destination": "/not-found.html"
+      "source": "/",
+      "destination": "/index.html"
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/not-found.html"
     }
   ]
 }
