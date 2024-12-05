@@ -11,7 +11,7 @@ const updateModalContent = (contentKey, title) => {
   const iconPath =
     process.env.NODE_ENV === "development"
       ? "./images/icons.svg#icon-"
-      : "/assets/icons-CCWhYS4B.svg#icon-";
+      : "/assets/icons-zDBdPGNK.svg#icon-";
 
   const modalContentData = {
     proceed: `<div class="modal__title-wrapper">
