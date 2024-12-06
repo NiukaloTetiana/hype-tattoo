@@ -2,18 +2,37 @@
 @use "./mixins";
 
 .header {
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 998;
   background-color: variables.$black-text-color;
+
+  @media only screen and (min-width: 1440px) {
+    background-color: transparent;
+  }
+
   &__container {
     @include mixins.flex-between;
     padding-block: 14px;
 
-    @media only screen and (max-width: 374.99px) {
-      padding-block: 10px;
+    @media only screen and (min-width: 1440px) {
+      padding-block: 36px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      padding-block: 46px;
     }
   }
 
   &__logo {
     fill: variables.$white-text-color;
+
+    @media only screen and (min-width: 1440px) {
+      width: 65px;
+      height: 77px;
+      fill: variables.$black-text-color;
+    }
   }
 
   &__button-menu {
@@ -47,25 +66,84 @@
         fill: variables.$white-text-color;
       }
     }
+
+    @media only screen and (min-width: 1440px) {
+      gap: 18px;
+      height: 43px;
+      font-size: 47px;
+      color: variables.$black-text-color;
+
+      svg {
+        width: 43px;
+        height: 43px;
+      }
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        color: variables.$accent-color;
+
+        svg {
+          fill: variables.$black-text-color;
+        }
+      }
+    }
   }
 }
 
 .menu {
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 998;
+  right: 0;
+  z-index: 999;
   transform: scale(0);
 
   width: 100%;
   height: 100%;
-  background: variables.$accent-color;
+  max-width: 1920px;
+  background-color: variables.$accent-color;
+  backdrop-filter: blur(10px);
   padding: 45px 20px;
 
   transition: transform 0.45s ease;
 
   @media only screen and (max-width: 374.99px) {
     padding-block: 30px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 30px 56px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    padding: 70px 96px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    padding: 76px 70px 86px 267px;
+  }
+
+  &__logo {
+    display: none;
+
+    @media only screen and (min-width: 1440px) {
+      display: block;
+      position: absolute;
+      top: 26px;
+      left: 32px;
+      fill: variables.$black-text-color;
+      width: 45px;
+      height: 57px;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    &__logo {
+      top: 46px;
+      left: 70px;
+      width: 65px;
+      height: 77px;
+    }
   }
 
   &__container-text {
@@ -75,6 +153,14 @@
     @media only screen and (max-width: 374.99px) {
       margin-bottom: 28px;
     }
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 28px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-bottom: 66px;
+    }
   }
 
   &__text {
@@ -83,6 +169,14 @@
 
     @media only screen and (max-width: 374.99px) {
       font-size: 18px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 34px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      font-size: 44px;
     }
   }
 
@@ -118,6 +212,39 @@
         height: 18px;
       }
     }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 34px;
+      gap: 19px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @media only screen and (min-width: 1920px) {
+      font-size: 44px;
+      gap: 19px;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    &__wrapper-nav {
+      @include mixins.flex-start;
+      gap: 78px;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    &__wrapper-nav {
+      gap: 158px;
+    }
   }
 
   &__nav {
@@ -125,6 +252,15 @@
 
     @media only screen and (max-width: 374.99px) {
       margin-bottom: 40px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 28px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 552px;
+      margin-bottom: 0;
     }
   }
 
@@ -136,10 +272,18 @@
     @media only screen and (max-width: 374.99px) {
       gap: 9px;
     }
+
+    @media only screen and (min-width: 1440px) {
+      gap: 33px;
+    }
   }
 
   &__item {
     text-align: center;
+
+    @media only screen and (min-width: 1440px) {
+      text-align: start;
+    }
   }
 
   &__link {
@@ -161,6 +305,14 @@
     @media only screen and (max-width: 374.99px) {
       font-size: 28px;
     }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 44px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      font-size: 54px;
+    }
   }
 
   &__legacy {
@@ -176,9 +328,25 @@
     @media only screen and (max-width: 374.99px) {
       font-size: 44px;
     }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 178px;
+      width: 683px;
+      text-align: left;
+      padding-top: 77px;
+      margin-bottom: 88px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      font-size: 198px;
+    }
   }
 
   &__button {
+    width: 293px;
+    margin-bottom: 52px;
+    margin-inline: auto;
+
     @include mixins.button(
       $btn-height-sm: 71px,
       $btn-height-lg: 121px,
@@ -190,10 +358,6 @@
       $bg-color: variables.$black-text-color,
       $icon-color: variables.$white-text-color
     );
-
-    margin-bottom: 52px;
-    margin-inline: auto;
-    width: 293px;
 
     &:hover,
     &:focus-visible,
@@ -229,6 +393,26 @@
         }
       }
     }
+
+    @media only screen and (min-width: 1440px) {
+      width: 500px;
+      margin-inline-start: 0;
+      margin-bottom: 59px;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    &__wrapper-copyright {
+      @include mixins.flex-start;
+      gap: 57px;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    &__wrapper-copyright {
+      @include mixins.flex-start;
+      gap: 107px;
+    }
   }
 
   &__link--mail {
@@ -245,6 +429,16 @@
     @media only screen and (max-width: 374.99px) {
       font-size: 20px;
     }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 34px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      font-size: 44px;
+    }
   }
 
   &__copyright {
@@ -252,6 +446,12 @@
 
     @media only screen and (max-width: 374.99px) {
       font-size: 12px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 16px;
+      text-align: end;
+      width: 180px;
     }
   }
 }
