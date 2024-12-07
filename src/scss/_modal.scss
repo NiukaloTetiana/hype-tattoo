@@ -6,22 +6,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 576px;
-  height: 649px;
+  width: 300px;
+  height: 470px;
   border-radius: 12px;
   border: none;
 
-  padding: 32px 44px 30px 32px;
+  padding: 20px;
   background-color: transparent;
 
-  @media only screen and (max-width: 374.99px) {
-    width: 300px;
-    height: 490px;
-    padding: 20px;
-
-    &::after {
-      top: 20px;
-    }
+  @media only screen and (min-width: 768px) {
+    width: 576px;
+    height: 649px;
+    padding: 32px 44px 30px 32px;
   }
 
   &::backdrop {
@@ -49,7 +45,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 26px;
+    top: 20px;
     right: 0;
     z-index: 1;
     border-radius: 12px;
@@ -57,8 +53,8 @@
     height: 30px;
     background-color: variables.$white-text-color;
 
-    @media only screen and (max-width: 374.99px) {
-      top: 20px;
+    @media only screen and (min-width: 768px) {
+      top: 26px;
     }
   }
 
@@ -84,16 +80,16 @@
 
   &__button--close {
     position: absolute;
-    top: 0;
-    right: 28px;
+    top: -3px;
+    right: 10px;
 
-    @media only screen and (max-width: 374.99px) {
-      top: -3px;
-      right: 10px;
+    @media only screen and (min-width: 768px) {
+      top: 0;
+      right: 28px;
 
       svg {
-        width: 12px;
-        height: 12px;
+        width: 16px;
+        height: 16px;
       }
     }
   }
@@ -104,30 +100,30 @@
 
   &__title-wrapper {
     @include mixins.flex-start;
-    gap: 18px;
-    margin-bottom: 48px;
+    gap: 12px;
+    margin-bottom: 28px;
 
     svg {
       fill: variables.$black-text-color;
     }
 
-    @media only screen and (max-width: 374.99px) {
-      gap: 12px;
-      margin-bottom: 28px;
+    @media only screen and (min-width: 768px) {
+      gap: 18px;
+      margin-bottom: 48px;
     }
   }
 
   &__title {
     font-weight: 600;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: variables.$dark-text-color;
-    margin-bottom: 54px;
+    margin-bottom: 38px;
 
-    @media only screen and (max-width: 374.99px) {
-      font-size: 26px;
-      margin-bottom: 38px;
+    @media only screen and (min-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 54px;
     }
   }
 
@@ -137,18 +133,18 @@
 
   &__input--wrapper {
     position: relative;
-    margin-bottom: 52px;
+    margin-bottom: 36px;
 
     &:nth-last-child(2) {
-      margin-bottom: 41px;
+      margin-bottom: 22px;
     }
 
-    @media only screen and (max-width: 374.99px) {
-      margin-bottom: 36px;
-    }
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 52px;
 
-    &:nth-last-child(2) {
-      margin-bottom: 28px;
+      &:nth-last-child(2) {
+        margin-bottom: 41px;
+      }
     }
   }
 
@@ -164,20 +160,20 @@
       transform: translateY(-50%);
       color: variables.$black-text-color;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1;
       transition: all 0.3s ease;
       pointer-events: none;
 
-      @media only screen and (max-width: 374.99px) {
-        font-size: 16px;
+      @media only screen and (min-width: 768px) {
+        font-size: 18px;
       }
     }
 
     &__input {
       width: 100%;
-      height: 49px;
-      font-size: 20px;
+      height: 46px;
+      font-size: 18px;
       border: none;
       border-bottom: 1px solid variables.$black-text-color;
 
@@ -193,30 +189,41 @@
         color: variables.$accent-color;
       }
 
-      @media only screen and (max-width: 374.99px) {
-        height: 46px;
-        font-size: 18px;
+      @media only screen and (min-width: 768px) {
+        height: 49px;
+        font-size: 20px;
       }
     }
   }
 
   &__button {
     @include mixins.button(
-      $btn-height-sm: 73px,
-      $btn-height-lg: 121px,
-      $gap-sm: 5px,
-      $gap-lg: 8px,
-      $text-width-sm: 223px,
-      $text-width-lg: 371px,
       $text-color: variables.$black-text-color,
       $bg-text: variables.$white-text-color,
       $bg-color: variables.$accent-color,
-
       $icon-color: variables.$white-text-color
     );
 
-    margin-inline: auto;
-    margin-bottom: 33px;
+    width: 233px;
+    height: 56px;
+    margin-bottom: 20px;
+
+    .modal__button-icon-border {
+      width: 173px;
+      height: 56px;
+    }
+    .modal__button-text {
+      font-size: 12px;
+    }
+    .modal__button-span-icon {
+      width: 56px;
+      height: 56px;
+
+      svg {
+        width: 11px;
+        height: 13px;
+      }
+    }
 
     &:hover,
     &:focus-visible,
@@ -230,25 +237,26 @@
       }
     }
 
-    @media only screen and (max-width: 374.99px) {
-      width: 233px;
-      height: 56px;
-      margin-bottom: 20px;
+    @media only screen and (min-width: 768px) {
+      width: 500px;
+      height: 121px;
+      margin-bottom: 39px;
 
       .modal__button-icon-border {
-        width: 173px;
-        height: 56px;
+        width: 371px;
+        height: 121px;
       }
       .modal__button-text {
-        font-size: 12px;
+        font-size: 26px;
+        width: 371px;
       }
       .modal__button-span-icon {
-        width: 56px;
-        height: 56px;
+        width: 121px;
+        height: 121px;
 
         svg {
-          width: 11px;
-          height: 13px;
+          width: 21px;
+          height: 24px;
         }
       }
     }
@@ -256,10 +264,10 @@
 
   &__text {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 8px;
     line-height: 1.5;
     color: #a2a2a2;
-    width: 280px;
+    width: 180px;
     cursor: pointer;
 
     &__span {
@@ -268,9 +276,9 @@
       color: variables.$accent-color;
     }
 
-    @media only screen and (max-width: 374.99px) {
-      font-size: 10px;
-      width: 210px;
+    @media only screen and (min-width: 768px) {
+      font-size: 13px;
+      width: 280px;
     }
   }
 }

@@ -4,7 +4,7 @@
 .gift {
   padding-bottom: 56px;
 
-  @media only screen and (max-width: 374.99px) {
+  @media only screen and (max-width: 374.98px) {
     padding-bottom: 40px;
   }
 
@@ -25,6 +25,7 @@
 
     @media only screen and (min-width: 1920px) {
       align-items: start;
+      padding-inline: 70px 0;
     }
   }
 
@@ -34,6 +35,7 @@
 
     @media only screen and (min-width: 768px) {
       height: 320px;
+      width: 367px;
       margin-bottom: 0;
     }
 
@@ -104,7 +106,7 @@
       border-radius: 100px;
     }
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       &__item {
         font-size: 10px;
         padding: 6px 10px;
@@ -128,7 +130,7 @@
   &__title {
     @include mixins.title;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 58px;
     }
 
@@ -170,7 +172,7 @@
       letter-spacing: -0.02em;
       text-transform: uppercase;
 
-      @media only screen and (max-width: 374.99px) {
+      @media only screen and (max-width: 374.98px) {
         font-size: 10px;
         height: 22px;
         width: 22px;
@@ -192,7 +194,7 @@
       font-size: 15px;
       width: 240px;
 
-      @media only screen and (max-width: 374.99px) {
+      @media only screen and (max-width: 374.98px) {
         font-size: 12px;
         width: 220px;
       }
