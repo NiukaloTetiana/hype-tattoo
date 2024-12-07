@@ -8,9 +8,15 @@
   z-index: 998;
   width: 100%;
   background-color: variables.$black-text-color;
+  padding-block: 14px;
 
   @media only screen and (min-width: 1440px) {
+    padding-block: 36px;
     background-color: transparent;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    padding-block: 46px;
   }
 
   &__shadow {
@@ -20,15 +26,6 @@
 
   &__container {
     @include mixins.flex-between;
-    padding-block: 14px;
-
-    @media only screen and (min-width: 1440px) {
-      padding-block: 36px;
-    }
-
-    @media only screen and (min-width: 1920px) {
-      padding-block: 46px;
-    }
   }
 
   &__logo {

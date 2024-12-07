@@ -11,6 +11,7 @@
 
   @media only screen and (min-width: 1920px) {
     height: 1655px;
+    padding-bottom: 210px;
   }
 
   &::before {
@@ -45,12 +46,20 @@
       font-size: 58px;
     }
 
+    @media only screen and (min-width: 768px) {
+      font-size: 56px;
+    }
+
     @media only screen and (min-width: 1440px) {
       font-size: 133px;
       text-align: start;
-      padding-top: 201px;
+      padding-top: 100px;
       padding-left: 70px;
       width: 511px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      padding-top: 201px;
     }
   }
 

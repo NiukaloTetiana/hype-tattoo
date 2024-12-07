@@ -9,6 +9,21 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 63px;
+
+  @media only screen and (min-width: 1440px) {
+    scroll-padding-top: 152px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    scroll-padding-top: 172px;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {

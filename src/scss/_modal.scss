@@ -2,6 +2,7 @@
 @use "./mixins";
 
 .modal {
+  overflow-y: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -240,7 +241,7 @@
     @media only screen and (min-width: 768px) {
       width: 500px;
       height: 121px;
-      margin-bottom: 39px;
+      margin-bottom: 18px;
 
       .modal__button-icon-border {
         width: 371px;
@@ -259,6 +260,10 @@
           height: 24px;
         }
       }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-bottom: 39px;
     }
   }
 

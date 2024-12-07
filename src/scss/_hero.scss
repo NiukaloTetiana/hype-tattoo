@@ -5,7 +5,7 @@
   padding-bottom: 57px;
   margin-top: 64px;
 
-  @media only screen and (max-width: 374.99px) {
+  @media only screen and (max-width: 374.98px) {
     padding-bottom: 40px;
   }
 
@@ -22,11 +22,11 @@
     margin-inline: auto;
     margin-bottom: 35px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       background-position: center top -90px;
     }
 
-    @media only screen and (max-width: 767.99px) and (min-device-pixel-ratio: 2),
+    @media only screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2),
       (max-width: 767px) and (min-resolution: 192dpi) {
       background-image: url("../images/hero/hero_mobile_2x.jpg");
     }
@@ -100,7 +100,7 @@
     width: 260px;
     margin-bottom: 51px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       margin-bottom: 40px;
     }
 
@@ -261,7 +261,7 @@
       fill: variables.$black-text-color;
     }
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       &__title {
         font-size: 38px;
         margin-bottom: 25px;
@@ -390,7 +390,7 @@
       fill: variables.$white-text-color;
     }
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       &__text {
         font-size: 12px;
         width: 220px;
