@@ -22,13 +22,16 @@ import throttle from "lodash.throttle";
 
 const headerContainer = document.querySelector("header");
 
-window.addEventListener(
-  "scroll",
-  throttle(() => {
-    if (window.scrollY > 0) {
-      headerContainer.classList.add("header__shadow");
-    } else {
-      headerContainer.classList.remove("header__shadow");
-    }
-  }, 900)
-);
+const handleScroll = () => {
+  if (window.scrollY > 0) {
+    headerContainer.classList.add("header__shadow");
+  } else {
+    headerContainer.classList.remove("header__shadow");
+  }
+};
+
+window.addEventListener("load", () => {
+  handleScroll();
+});
+
+window.addEventListener("scroll", throttle(handleScroll, 900));

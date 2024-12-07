@@ -5,6 +5,14 @@
   position: relative;
   padding-bottom: 68px;
 
+  @media only screen and (min-width: 1440px) {
+    height: 1200px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    height: 1655px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -18,6 +26,10 @@
     @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
       background-image: url("../images/learning/learning_mobile_2x.jpg");
     }
+
+    @media only screen and (min-width: 1440px) {
+      height: 100%;
+    }
   }
 
   &__img {
@@ -29,7 +41,7 @@
     text-align: center;
     padding-top: 44px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 58px;
     }
   }
@@ -51,8 +63,32 @@
   &__list {
     @include mixins.flex-start;
     gap: 10px;
-    width: calc(100% * 5);
+    width: calc(335px * 5 + 40px);
     transition: transform 0.5s ease;
+
+    @media only screen and (min-width: 768px) {
+      width: calc(702px * 5 + 40px);
+    }
+
+    @media only screen and (min-width: 1440px) {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        ". . . i5"
+        "i1 . i3 . "
+        ". i2 . i4";
+      gap: 0;
+      width: auto;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      top: 244px;
+    }
   }
 
   &__item {
@@ -84,7 +120,7 @@
       letter-spacing: -0.03em;
     }
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       width: 300px;
       height: 300px;
 
@@ -103,6 +139,80 @@
         font-size: 12px;
       }
     }
+
+    @media only screen and (min-width: 768px) {
+      svg {
+        margin-bottom: 20px;
+      }
+      &__title {
+        font-size: 28px;
+      }
+
+      &__text {
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      width: 702px;
+      height: 300px;
+    }
+    @media only screen and (min-width: 1440px) {
+      width: 320px;
+      height: 320px;
+      &:nth-child(1) {
+        grid-area: i1;
+      }
+
+      &:nth-child(2) {
+        grid-area: i2;
+        margin-right: 100px;
+      }
+
+      &:nth-child(3) {
+        grid-area: i3;
+      }
+
+      &:nth-child(4) {
+        grid-area: i4;
+      }
+
+      &:nth-child(5) {
+        grid-area: i5;
+      }
+
+      svg {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 35px;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+    }
+    @media only screen and (min-width: 1920px) {
+      width: 400px;
+      height: 400px;
+      &:nth-child(2) {
+        grid-area: i2;
+        margin-right: 173px;
+      }
+
+      svg {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 120px;
+      }
+
+      &__title {
+        font-size: 30px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+    }
   }
 
   &__slider--control {
@@ -117,20 +227,36 @@
       transition: background-color variables.$transition-delay
           variables.$transition-type,
         width variables.$transition-delay variables.$transition-type;
+
+      @media only screen and (min-width: 768px) {
+        width: 35px;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 1439.98px) {
+    @for $i from 1 through 5 {
+      #learning-slide#{$i}:checked ~ &__slider--container &__list {
+        transform: translateX(calc(-345px * ($i - 1)));
+        @media only screen and (min-width: 768px) {
+          transform: translateX(calc(-712px * ($i - 1)));
+        }
+      }
+      #learning-slide#{$i}:checked ~ &__slider--control #learning-label#{$i} {
+        width: 33px;
+        background-color: variables.$accent-color;
+
+        @media only screen and (min-width: 768px) {
+          width: 50px;
+        }
+      }
     }
   }
 
-  @for $i from 1 through 5 {
-    #learning-slide#{$i}:checked ~ &__slider--container &__list {
-      transform: translateX(calc(-345px * ($i - 1)));
-    }
-    #learning-slide#{$i}:checked ~ &__slider--control #learning-label#{$i} {
-      width: 33px;
-      background-color: variables.$accent-color;
-    }
-  }
-
-  @media only screen and (max-width: 374.99px) {
+  @media only screen and (max-width: 374.98px) {
     @for $i from 1 through 5 {
       #learning-slide#{$i}:checked ~ &__slider--container &__list {
         transform: translateX(calc(-310px * ($i - 1)));

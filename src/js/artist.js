@@ -14,7 +14,7 @@ let activeIndex = 0;
 const breakpoints = [
   { max: 374.98, slideWidth: 298, gap: 36 },
   { max: 767.98, slideWidth: 350, gap: 36 },
-  { max: 1399.98, slideWidth: 732, gap: 64 },
+  { max: 1439.98, slideWidth: 732, gap: 64 },
   { max: 1919.98, slideWidth: 1360, gap: 64 },
   { max: Infinity, slideWidth: 1804, gap: 64 },
 ];
