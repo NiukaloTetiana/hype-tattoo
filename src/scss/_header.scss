@@ -2,11 +2,16 @@
 @use "./mixins";
 
 .header {
+  position: fixed;
   top: 0;
   left: 0;
-  position: sticky;
   z-index: 998;
+  width: 100%;
   background-color: variables.$black-text-color;
+
+  &__shadow {
+    box-shadow: 0 1px 5px #0003, 0 2px 6px #0003;
+  }
 
   @media only screen and (min-width: 1440px) {
     background-color: transparent;

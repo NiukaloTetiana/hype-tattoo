@@ -1,3 +1,5 @@
+import throttle from "lodash.throttle";
+
 (() => {
   const mobileMenu = document.querySelector(".js-menu");
   const openMenuBtn = document.querySelector(".js-menu__open");
@@ -17,3 +19,16 @@
   closeMenuBtn.addEventListener("click", toggleMenu);
   navLinks.forEach((navLink) => navLink.addEventListener("click", toggleMenu));
 })();
+
+const headerContainer = document.querySelector("header");
+
+window.addEventListener(
+  "scroll",
+  throttle(() => {
+    if (window.scrollY > 0) {
+      headerContainer.classList.add("header__shadow");
+    } else {
+      headerContainer.classList.remove("header__shadow");
+    }
+  }, 900)
+);
