@@ -9,12 +9,13 @@
   width: 100%;
   background-color: variables.$black-text-color;
 
-  &__shadow {
-    box-shadow: 0 1px 5px #0003, 0 2px 6px #0003;
-  }
-
   @media only screen and (min-width: 1440px) {
     background-color: transparent;
+  }
+
+  &__shadow {
+    box-shadow: 0 1px 5px #0003, 0 2px 6px #0003;
+    background-color: rgba(0, 0, 0, 0.332);
   }
 
   &__container {
