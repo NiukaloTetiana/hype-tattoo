@@ -37,6 +37,15 @@
   text-transform: uppercase;
 }
 
+@mixin title-desktop {
+  font-family: variables.$font-secondary;
+  font-weight: 700;
+  font-size: 133px;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
 @mixin text {
   font-weight: 700;
   font-size: 20px;

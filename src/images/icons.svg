@@ -822,5 +822,15 @@
         </filter>
       </defs>
     </symbol>
+     <symbol id="icon-line-lg" fill="none" viewBox="0 0 1920 147">
+        <path d="M1920 -20L1740.9 103.945H1291.26L1226.22 58.9337H842.568L718.141 145.043H156.33L-18.9999 23.7071" stroke="white"/>
+        <path d="M1394.01 103.945L1403.44 106.555L1433.6 106.555L1433.6 103.945L1394.01 103.945Z" fill="white"/>
+        <rect width="11.3116" height="3.91407" transform="matrix(-1 0 0 1 489.082 143.086)" fill="white"/>
+    </symbol>
+    <symbol id="icon-vector" viewBox="0 0 1211 459" fill="none">
+        <rect width="8.65113" height="2.99348" transform="matrix(-0.812141 0.583461 0.583461 0.812141 988.439 159.366)" fill="white"/>
+        <path d="M1217.8 1L844.574 261.797H766.947L534.448 418.581H95.0704L1 479" stroke="white"/>
+    </symbol>
+
   </defs>
 </svg>
