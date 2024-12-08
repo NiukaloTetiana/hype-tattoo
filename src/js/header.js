@@ -1,7 +1,7 @@
 import throttle from "lodash.throttle";
 
 (() => {
-  const mobileMenu = document.querySelector(".js-menu");
+  const mobileMenu = document.querySelector(".js-backdrop");
   const openMenuBtn = document.querySelector(".js-menu__open");
   const closeMenuBtn = document.querySelector(".js-menu__close");
   const navLinks = document.querySelectorAll(".menu__link");

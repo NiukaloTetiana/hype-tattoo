@@ -19,7 +19,7 @@
     @include mixins.title;
     margin-bottom: 34px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 58px;
       margin-bottom: 24px;
     }
@@ -52,7 +52,7 @@
     border-top: 1px solid #414141;
     height: 77px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       height: 58px;
     }
 
@@ -67,7 +67,7 @@
     line-height: 1.2;
     width: 252px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 12px;
       width: 232px;
     }
@@ -86,7 +86,7 @@
     height: 33px;
     flex-shrink: 0;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       width: 23px;
       height: 23px;
     }
@@ -101,7 +101,7 @@
     fill: variables.$black-text-color;
     stroke: none;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       width: 10px;
       height: 10px;
     }

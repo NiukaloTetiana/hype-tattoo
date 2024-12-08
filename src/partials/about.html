@@ -1,50 +1,48 @@
 <section id="about" class="about">
-  <div class="container about__container">
-    <svg height="59" width="59" class="about__icon about__margin">
-      <use href="./images/icons.svg#icon-snowflake"></use>
-    </svg>
-    <h3 class="about__title">Our team</h3>
-    <h4 class="about__subtitle">
-      Each instructor in our course is a specialist in their field, bringing
-      years of experience and expertise to the table.
-    </h4>
-    <p class="about__text about__margin">
-      They&#8217;re here to teach you the essential skills and insider knowledge
-      you need to become a successful tattoo artist
-    </p>
+  <div class="about__wrapper">
+    <div class="container about__container">
+      <svg height="59" width="59" class="about__icon--start">
+        <use href="./images/icons.svg#icon-snowflake"></use>
+      </svg>
+      <h3 class="about__title">Our team</h3>
+      <h4 class="about__subtitle">
+        Each instructor in our course is a specialist in their field, bringing
+        years of experience and expertise to the table.
+      </h4>
+      <p class="about__text">
+        They&#8217;re here to teach you the essential skills and insider
+        knowledge you need to become a successful tattoo artist
+      </p>
 
-    <svg height="34" width="122" class="about__icon">
-      <use href="./images/icons.svg#icon-for-team"></use>
-    </svg>
+      <svg height="34" width="122" class="about__icon--end">
+        <use href="./images/icons.svg#icon-for-team"></use>
+      </svg>
+    </div>
+    <picture>
+      <source
+        media="(min-width:1440px)"
+        srcset="
+          ./images/about/team_desktop_1x.jpg 1x,
+          ./images/about/team_desktop_1x.jpg 2x
+        "
+        type="image/jpg"
+        width="864"
+        height="1080"
+      />
+
+      <source
+        media="(max-width:767.99px)"
+        srcset="
+          ./images/about/team_mobile_1x.jpg 1x,
+          ./images/about/team_mobile_2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+      <img
+        class="about__img"
+        src="./images/about/team_mobile_1x.jpg"
+        alt="Team photo"
+      />
+    </picture>
   </div>
-  <picture>
-    <source
-      media="(min-width:1440px)"
-      srcset="
-        ./images/about/team_desktop_1x.jpg 1x,
-        ./images/about/team_desktop_2x.jpg 2x
-      "
-      type="image/jpg"
-      width="864"
-      height="1080"
-    />
-
-    <source
-      media="(max-width:767.99px)"
-      srcset="
-        ./images/about/team__mobile_1x.jpg 1x,
-        ./images/about/team__mobile_2x.jpg 2x
-      "
-      type="image/jpg"
-      width="796"
-      height="491"
-    />
-    <img
-      class="about__img"
-      src="./images/about/team__mobile_1x.jpg"
-      alt="Team photo"
-      width="375"
-      height="335"
-    />
-  </picture>
 </section>

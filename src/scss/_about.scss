@@ -4,29 +4,72 @@
 .about {
   background: linear-gradient(
     to bottom,
-    variables.$accent-color 60%,
-    transparent 60%
+    variables.$accent-color 668px,
+    transparent 670px
   );
+
+  @media only screen and (max-width: 374.98px) {
+    background: linear-gradient(
+      to bottom,
+      variables.$accent-color 545px,
+      transparent 545px
+    );
+  }
+
+  @media only screen and (min-width: 768px) {
+    background: transparent;
+  }
+
+  &__wrapper {
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   &__container {
     padding-block: 65px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       padding-block: 40px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin-inline: 0;
+      padding-inline: 26px;
+      background-color: variables.$accent-color;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      padding: 104px 58px;
     }
   }
 
-  &__icon {
+  &__icon--start {
     fill: variables.$black-text-color;
     display: block;
     margin-inline: auto;
-  }
-
-  &__margin {
     margin-bottom: 33px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       margin-bottom: 24px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 95px;
+      height: 95px;
+      margin-bottom: 99px;
+    }
+  }
+
+  &__icon--end {
+    fill: variables.$black-text-color;
+    display: block;
+    margin-inline: auto;
+
+    @media only screen and (min-width: 1440px) {
+      width: 212px;
+      height: 60px;
     }
   }
 
@@ -35,9 +78,14 @@
     text-align: center;
     margin-bottom: 22px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 58px;
       margin-bottom: 18px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 133px;
+      margin-bottom: 44px;
     }
   }
 
@@ -53,10 +101,21 @@
     margin-inline: auto;
     margin-bottom: 22px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 30px;
       width: 280px;
       margin-bottom: 18px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 66px;
+      width: 600px;
+      margin-bottom: 44px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      font-size: 66px;
+      width: 901px;
     }
   }
 
@@ -69,21 +128,46 @@
     color: variables.$dark-text-color;
     width: 210px;
     margin-inline: auto;
+    margin-bottom: 33px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 12px;
       width: 180px;
+      margin-bottom: 24px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 24px;
+      width: 400px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: 656px;
     }
   }
 
   &__img {
-    margin-inline: auto;
     width: 375px;
     height: 446px;
+    margin-inline: auto;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       width: 320px;
+      height: 390px;
     }
-    height: 390px;
+
+    @media only screen and (min-width: 768px) {
+      height: 669px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 724px;
+      height: 1275px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: 864px;
+      height: 1210px;
+    }
   }
 }
