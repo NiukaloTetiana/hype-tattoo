@@ -4,6 +4,17 @@
 .faq {
   padding-bottom: 49px;
 
+  @media only screen and (min-width: 1440px) {
+    padding-bottom: 220px;
+  }
+
+  &__container {
+    @media only screen and (min-width: 768px) {
+      @include mixins.flex-between;
+      align-items: start;
+    }
+  }
+
   &__title {
     @include mixins.title;
     margin-bottom: 34px;
@@ -12,16 +23,41 @@
       font-size: 58px;
       margin-bottom: 24px;
     }
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 133px;
+    }
+  }
+
+  &__list {
+    @media only screen and (min-width: 768px) {
+      width: 480px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 920px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      width: 1200px;
+    }
   }
 
   &__wrapper--item {
     @include mixins.flex-between;
-    padding-block: 22px;
     border-top: 1px solid #414141;
     height: 77px;
 
     @media only screen and (max-width: 374.99px) {
       height: 58px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      height: 173px;
     }
   }
 
@@ -35,6 +71,11 @@
       font-size: 12px;
       width: 232px;
     }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 26px;
+      width: 100%;
+    }
   }
 
   &__span {
@@ -43,10 +84,16 @@
     border: 1.27px solid #414141;
     width: 33px;
     height: 33px;
+    flex-shrink: 0;
 
     @media only screen and (max-width: 374.99px) {
       width: 23px;
       height: 23px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 81px;
+      height: 81px;
     }
   }
 
@@ -57,6 +104,11 @@
     @media only screen and (max-width: 374.99px) {
       width: 10px;
       height: 10px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 36px;
+      height: 36px;
     }
   }
 }
