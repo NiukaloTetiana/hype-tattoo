@@ -422,6 +422,7 @@
       background-color: variables.$accent-color;
       border-radius: 50%;
       filter: blur(300px);
+      -webkit-filter: blur(300px);
 
       @media only screen and (min-width: 1440px) {
         width: 683px;
