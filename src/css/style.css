@@ -4125,6 +4125,7 @@ summary {
 }
 
 .artist {
+  overflow: hidden;
   background-color: #000;
   padding-block: 80px 86px;
 }
@@ -5328,12 +5329,6 @@ summary {
 .faq details[open] summary svg {
   transform: rotate(180deg);
 }
-.faq details[open] summary svg use {
-  content: url("../images/icons.svg#icon-minus");
-}
-.faq details[open][data-icon=plus]:not([open]) svg use {
-  content: url("./images/icons.svg#icon-faq");
-}
 .faq__summary {
   display: flex;
   align-items: center;
@@ -5343,8 +5338,6 @@ summary {
   font-size: 14px;
   line-height: 1.2;
   width: 100%;
-  cursor: pointer;
-  list-style: none;
 }
 @media only screen and (max-width: 374.98px) {
   .faq__summary {
@@ -5396,9 +5389,6 @@ summary {
   }
 }
 .faq__answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition-duration: 0.5s;
   font-weight: 500;
   line-height: 1.2;
   font-size: 12px;
@@ -5419,9 +5409,6 @@ summary {
 .faq__answer--main {
   font-weight: 600;
   margin-bottom: 10px;
-}
-.faq__details[open] + .faq__answer {
-  grid-template-rows: 1fr;
 }
 
 .modal {

@@ -34,8 +34,16 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+
     @media only screen and (min-width: 768px) {
       width: 480px;
+    }
+
+    @media only screen and (max-width: 374.98px) {
+      width: 280px;
     }
 
     @media only screen and (min-width: 1440px) {
@@ -47,34 +55,65 @@
     }
   }
 
-  &__wrapper--item {
-    @include mixins.flex-between;
+  &__item {
+    display: flex;
+    flex-direction: column;
     border-top: 1px solid #414141;
-    height: 77px;
+    padding-block: 22px;
+
+    &:has(details[open]) {
+      margin-bottom: 20px;
+
+      div {
+        margin-top: 20px;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        margin-block: 40px;
+
+        div {
+          margin-top: 40px;
+        }
+      }
+    }
 
     @media only screen and (max-width: 374.98px) {
-      height: 58px;
+      padding-block: 18px;
     }
 
     @media only screen and (min-width: 1440px) {
-      height: 173px;
+      padding-block: 46px;
     }
   }
 
-  &__text {
+  details {
+    display: block;
+
+    &[open] {
+      summary {
+        color: variables.$accent-color;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__summary {
+    @include mixins.flex-between;
+    align-items: center;
     font-weight: 600;
     font-size: 14px;
     line-height: 1.2;
-    width: 252px;
+    width: 100%;
 
     @media only screen and (max-width: 374.98px) {
       font-size: 12px;
-      width: 232px;
     }
 
     @media only screen and (min-width: 1440px) {
       font-size: 26px;
-      width: 100%;
     }
   }
 
@@ -100,6 +139,7 @@
   &__icon {
     fill: variables.$black-text-color;
     stroke: none;
+    transition: transform variables.$transition-delay variables.$transition-type;
 
     @media only screen and (max-width: 374.98px) {
       width: 10px;
@@ -110,5 +150,27 @@
       width: 36px;
       height: 36px;
     }
+  }
+
+  &__answer {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 12px;
+    padding-inline: 10px;
+
+    @media only screen and (max-width: 374.98px) {
+      font-size: 10px;
+      padding-inline: 8px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 22px;
+      padding-inline: 20px;
+    }
+  }
+
+  &__answer--main {
+    font-weight: 600;
+    margin-bottom: 10px;
   }
 }
