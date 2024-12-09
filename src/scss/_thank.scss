@@ -72,22 +72,22 @@
       width: 115px;
       height: 115px;
       z-index: 999;
-      background: url("../images/thank/thank_mobile_1x.png") no-repeat
+      background: url("../images/thank/thank_mobile_1x.webp") no-repeat
         center/cover;
 
       @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
-        background-image: url("../images/thank/thank_mobile_2x.png");
+        background-image: url("../images/thank/thank_mobile_2x.webp");
       }
 
       @media only screen and (min-width: 1440px) {
-        background-image: url("../images/thank/thank_desktop_1x.png");
+        background-image: url("../images/thank/thank_desktop_1x.webp");
         width: 350px;
         height: 350px;
       }
 
       @media only screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
         (min-width: 1440px) and (min-resolution: 192dpi) {
-        background-image: url("../images/thank/thank_desktop_2x.png");
+        background-image: url("../images/thank/thank_desktop_2x.webp");
       }
     }
 

@@ -4,39 +4,22 @@
 
 - Create a responsive webpage based on the provided design, ensuring accuracy in layout and design matching.
 
-## Requirements:
+## Technologies Used
 
-- **HTML/CSS**:
+<div style="display: flex; flex-wrap: wrap; gap: 10px; width: 100%;"> 
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/> 
+    <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS"/> 
+    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript"/> 
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" /> 
+    <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git"/> 
+    <img src="https://img.shields.io/badge/Normalize.css-4D4D4D?style=for-the-badge&logo=css3&logoColor=white" alt="Normalize.css"/> 
+    <img src="https://img.shields.io/badge/Autoprefixer-DD3735?style=for-the-badge&logo=postcss&logoColor=white" alt="Autoprefixer"/> 
+</div>
 
-  - Use semantic HTML5 markup.
-  - SCSS is preferred for styling, but plain CSS is also acceptable.
-  - Organize file structure for scalability (e.g., break styles into components).
+## Libraries and Utilities
 
-- **Technologies**:
-
-  - HTML, CSS (SCSS), JavaScript (if necessary).
-  - Do not use CSS frameworks (e.g., Bootstrap, Tailwind).
-  - Only use additional libraries if necessary for responsiveness (e.g., `normalize.css`).
-
-- **Responsiveness**:
-
-  - Ensure the page displays correctly on mobile (320px and above), tablets, and desktops (up to 1920px).
-  - Use flexible layouts (e.g., flexbox, grid) where possible.
-
-- **Interactivity**:
-
-  - Implement basic hover effects for buttons and interactive elements.
-  - Ensure all interactive elements provide visual feedback (as per the design).
-
-- **Code Quality**:
-
-  - Follow clean, readable, and maintainable coding practices.
-  - Use BEM methodology for class naming.
-
-- **Images and Fonts**:
-
-  - Download necessary images from the Figma design and include them locally in the project.
-  - Use the fonts specified in the design (either from Google Fonts or other sources as required).
-
-- **Browser Compatibility**:
-  - Ensure the page is displayed correctly in modern browsers (Chrome, Firefox, Safari).
+<div style="display: flex; flex-wrap: wrap; gap: 10px; width: 100%;"> 
+    <img src="https://img.shields.io/badge/Lodash-3492FF?style=for-the-badge&logo=lodash&logoColor=white" alt="Lodash"/> 
+    <img src="https://img.shields.io/badge/npm_run_all-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="npm-run-all"/> 
+</div>

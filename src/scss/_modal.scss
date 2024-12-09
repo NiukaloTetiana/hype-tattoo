@@ -54,6 +54,10 @@
     height: 30px;
     background-color: variables.$white-text-color;
 
+    @media only screen and (max-width: 374.98px) {
+      top: 18px;
+    }
+
     @media only screen and (min-width: 768px) {
       top: 26px;
     }

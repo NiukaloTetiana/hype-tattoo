@@ -22,10 +22,10 @@
       <source
         media="(min-width:1440px)"
         srcset="
-          ./images/about/team_desktop_1x.jpg 1x,
-          ./images/about/team_desktop_1x.jpg 2x
+          ./images/about/team_desktop_1x.webp 1x,
+          ./images/about/team_desktop_1x.webp 2x
         "
-        type="image/jpg"
+        type="image/webp"
         width="864"
         height="1080"
       />
@@ -33,15 +33,16 @@
       <source
         media="(max-width:767.99px)"
         srcset="
-          ./images/about/team_mobile_1x.jpg 1x,
-          ./images/about/team_mobile_2x.jpg 2x
+          ./images/about/team_mobile_1x.webp 1x,
+          ./images/about/team_mobile_2x.webp 2x
         "
-        type="image/jpg"
+        type="image/webp"
       />
       <img
         class="about__img"
-        src="./images/about/team_mobile_1x.jpg"
+        src="./images/about/team_mobile_1x.webp"
         alt="Team photo"
+        loading="lazy"
       />
     </picture>
   </div>

@@ -483,7 +483,7 @@
 
   &__img--wrapper {
     border: 0.31px solid variables.$white-text-color;
-    background: url("../images/programm/programm_mobile_best_1x.png") no-repeat
+    background: url("../images/programm/programm_mobile_best_1x.webp") no-repeat
       center/cover;
     height: 332px;
     width: 332px;
@@ -503,11 +503,11 @@
 
     @media only screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2),
       (max-width: 767px) and (min-resolution: 192dpi) {
-      background-image: url("../images/programm/programm_mobile_best_2x.png");
+      background-image: url("../images/programm/programm_mobile_best_2x.webp");
     }
 
     @media only screen and (min-width: 1440px) {
-      background-image: url("../images/programm/programm_desktop_best_1x.png");
+      background-image: url("../images/programm/programm_desktop_best_1x.webp");
 
       height: 1059px;
       width: 1059px;
@@ -516,7 +516,7 @@
 
     @media only screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
       (min-width: 1440px) and (min-resolution: 192dpi) {
-      background-image: url("../images/programm/programm_desktop_best_2x.png");
+      background-image: url("../images/programm/programm_desktop_best_2x.webp");
     }
 
     &__title {
