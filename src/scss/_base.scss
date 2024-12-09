@@ -127,3 +127,49 @@ summary {
     @include mixins.container-max-width(1920px, 0);
   }
 }
+
+/* ---------------------------Scroll up button--------------------- */
+.scroll-up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  @include mixins.flex-center;
+  background-color: #078385;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
+  cursor: pointer;
+  transform: scale(0);
+  transition: background-color variables.$transition-delay
+      variables.$transition-type,
+    transform variables.$transition-delay variables.$transition-type;
+
+  &__icon {
+    transform: rotate(-90deg);
+    transition: stroke variables.$transition-delay variables.$transition-type;
+    stroke: variables.$white-text-color;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: variables.$accent-color;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    right: 20px;
+    width: 80px;
+    height: 80px;
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.show {
+  transform: scale(1);
+}

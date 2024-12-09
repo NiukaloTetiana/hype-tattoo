@@ -138,6 +138,49 @@ summary {
   }
 }
 
+/* ---------------------------Scroll up button--------------------- */
+.scroll-up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #078385;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
+  cursor: pointer;
+  transform: scale(0);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.scroll-up-btn__icon {
+  transform: rotate(-90deg);
+  transition: stroke 0.3s ease;
+  stroke: #fff;
+}
+.scroll-up-btn:hover, .scroll-up-btn:focus-visible {
+  background-color: #00d0d2;
+}
+@media only screen and (min-width: 1440px) {
+  .scroll-up-btn {
+    right: 20px;
+    width: 80px;
+    height: 80px;
+  }
+  .scroll-up-btn__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.show {
+  transform: scale(1);
+}
+
 @font-face {
   font-family: "Mona Sans";
   src: url("../fonts/MonaSans-Regular.woff2") format("woff2"), url("../fonts/MonaSans-Regular.woff") format("woff");
