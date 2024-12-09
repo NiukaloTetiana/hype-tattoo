@@ -2,8 +2,36 @@
 @use "./mixins";
 
 .not-found {
-  padding-block: 85px 91px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 137px 91px;
   background-color: variables.$black-text-color;
+
+  @media only screen and (min-width: 1440px) {
+    padding-block: 175px 202px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 490px;
+      height: 490px;
+      background-color: variables.$accent-color;
+      border-radius: 50%;
+      filter: blur(195px);
+      -webkit-filter: blur(195px);
+    }
+    &::before {
+      top: -80px;
+      left: -80px;
+    }
+    &::after {
+      bottom: -100px;
+      right: -100px;
+    }
+  }
 
   &__title {
     @include mixins.flex-center;
@@ -17,6 +45,35 @@
     text-align: center;
     color: variables.$white-text-color;
     margin-bottom: 43px;
+
+    @media only screen and (max-width: 374.98px) {
+      font-size: 125px;
+
+      svg {
+        width: 130px;
+        height: 98px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 225px;
+
+      svg {
+        width: 210px;
+        height: 180px;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 523px;
+      gap: 43px;
+      margin-bottom: 54px;
+
+      svg {
+        width: 642px;
+        height: 508px;
+      }
+    }
   }
 
   &__text {
@@ -29,6 +86,11 @@
     color: variables.$white-text-color;
     margin-inline: auto;
     margin-bottom: 43px;
+
+    @media only screen and (min-width: 1440px) {
+      width: 100%;
+      font-size: 32px;
+    }
   }
 
   &__button {
@@ -58,6 +120,31 @@
       .not-found__button-span-icon svg {
         stroke: variables.$black-text-color;
       }
+    }
+
+    @media only screen and (max-width: 374.98px) {
+      width: 234px;
+      height: 57px;
+
+      .not-found__button-text {
+        width: 172px;
+        height: 57px;
+      }
+
+      .not-found__button-icon-border {
+        width: 172px;
+        height: 57px;
+      }
+
+      .not-found__button-span-icon {
+        width: 57px;
+        height: 57px;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 500px;
+      height: 121px;
     }
   }
 }

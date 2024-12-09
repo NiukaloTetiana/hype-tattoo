@@ -2,8 +2,63 @@
 @use "./mixins";
 
 .thank {
-  padding-block: 123px 58px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 186px 58px;
   background-color: variables.$black-text-color;
+
+  @media only screen and (min-width: 1440px) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 490px;
+      height: 490px;
+      background-color: variables.$accent-color;
+      border-radius: 50%;
+      filter: blur(195px);
+      -webkit-filter: blur(195px);
+    }
+    &::before {
+      top: -80px;
+      left: -80px;
+    }
+    &::after {
+      bottom: -100px;
+      right: -100px;
+    }
+  }
+
+  @media only screen and (max-width: 374.98px) {
+    padding-top: 200px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 200px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    padding-bottom: 218px;
+  }
+
+  &__container {
+    @media only screen and (min-width: 1440px) {
+      text-align: left;
+      width: 939px;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    // @media only screen and (min-width: 1920px) {
+    //   width: 939px;
+    //   padding-left: 0;
+    //   margin-right: 0;
+    //   margin-left: auto;
+    // }
+  }
 
   &__title {
     position: relative;
@@ -23,10 +78,59 @@
       left: 108px;
       width: 115px;
       height: 115px;
+      z-index: 999;
       background: url("../images/thank/thank_mobile_1x.png") no-repeat
         center/cover;
+
       @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
         background-image: url("../images/thank/thank_mobile_2x.png");
+      }
+
+      @media only screen and (min-width: 1440px) {
+        background-image: url("../images/thank/thank_desktop_1x.png");
+        width: 350px;
+        height: 350px;
+      }
+
+      @media only screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
+        (min-width: 1440px) and (min-resolution: 192dpi) {
+        background-image: url("../images/thank/thank_desktop_2x.png");
+      }
+    }
+
+    @media only screen and (max-width: 374.98px) {
+      &::before {
+        top: -118px;
+        left: 87px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      &::before {
+        top: -126px;
+        left: 285px;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 284px;
+      text-align: start;
+      margin-bottom: 35px;
+
+      &::before {
+        top: 300px;
+        left: -400px;
+      }
+    }
+
+    @media only screen and (min-width: 1920px) {
+      font-size: 312px;
+
+      &::before {
+        width: 688px;
+        height: 688px;
+        top: 0;
+        left: -799px;
       }
     }
   }
@@ -41,6 +145,18 @@
     color: variables.$white-text-color;
     margin-inline: auto;
     margin-bottom: 39px;
+
+    @media only screen and (max-width: 374.98px) {
+      width: 230px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 32px;
+      text-align: left;
+      width: 632px;
+      margin-inline: 0;
+      margin-bottom: 103px;
+    }
   }
 
   &__button {
@@ -70,6 +186,32 @@
       .thank__button-span-icon svg {
         stroke: variables.$black-text-color;
       }
+    }
+
+    @media only screen and (max-width: 374.98px) {
+      width: 234px;
+      height: 57px;
+
+      .thank__button-text {
+        width: 172px;
+        height: 57px;
+      }
+
+      .thank__button-icon-border {
+        width: 172px;
+        height: 57px;
+      }
+
+      .thank__button-span-icon {
+        width: 57px;
+        height: 57px;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 500px;
+      height: 121px;
+      margin-inline: 0;
     }
   }
 }
