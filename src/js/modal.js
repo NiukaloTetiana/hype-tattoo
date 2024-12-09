@@ -72,7 +72,7 @@ const updateModalContent = (contentKey, title) => {
     </form>
     <p class="modal__text">
       By sending this form I confirm that I have read and accept the
-      <span class="modal__text__span">Privacy Policy</span>
+      <a href="" class="modal__text__link">Privacy Policy</a>
     </p>`,
     consultation: ` <h4 class="modal__title">Ask a question</h4>
     <form class="modal__form" name="reviews-form">
@@ -128,7 +128,7 @@ const updateModalContent = (contentKey, title) => {
     </form>
     <p class="modal__text">
       By sending this form I confirm that I have read and accept the
-      <span class="modal__text__span">Privacy Policy</span>
+      <a href="" class="modal__text__link">Privacy Policy</span>
     </p>`,
   };
 

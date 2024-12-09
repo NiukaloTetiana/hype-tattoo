@@ -57,7 +57,8 @@
 
     svg {
       fill: variables.$accent-color;
-      transition: fill variables.$transition-delay variables.$transition-type;
+      transition: fill variables.$transition-delay variables.$transition-type,
+        transform variables.$transition-delay variables.$transition-type;
     }
 
     &:hover,
@@ -66,6 +67,7 @@
       color: variables.$accent-color;
 
       svg {
+        transform: rotate(180deg);
         fill: variables.$white-text-color;
       }
     }
@@ -124,7 +126,7 @@
   }
 
   @media only screen and (min-width: 1440px) {
-    padding: 70px 96px;
+    padding: 50px 96px;
   }
 
   @media only screen and (min-width: 1920px) {
@@ -198,7 +200,8 @@
 
     svg {
       fill: variables.$white-text-color;
-      transition: fill variables.$transition-delay variables.$transition-type;
+      transition: fill variables.$transition-delay variables.$transition-type,
+        transform variables.$transition-delay variables.$transition-type;
     }
 
     &:hover,
@@ -208,6 +211,7 @@
 
       svg {
         fill: variables.$black-text-color;
+        transform: rotate(180deg);
       }
     }
 
@@ -338,11 +342,11 @@
     }
 
     @media only screen and (min-width: 1440px) {
-      font-size: 178px;
+      font-size: 170px;
       width: 683px;
       text-align: left;
-      padding-top: 77px;
-      margin-bottom: 88px;
+      padding-top: 50px;
+      margin-bottom: 50px;
     }
 
     @media only screen and (min-width: 1920px) {

@@ -572,7 +572,8 @@
     &:focus-visible,
     &:active {
       .package__button--blast-text {
-        background-color: variables.$accent-color;
+        background-color: variables.$accent-dark-color;
+        color: variables.$white-text-color;
       }
 
       .package__button--blast-span-icon svg {

@@ -71,6 +71,15 @@
   @include flex-start;
   gap: $gap-sm;
   height: $btn-height-sm;
+  transform: scale(1);
+
+  &:hover,
+  &:focus-visible {
+    svg {
+      transform: scale(0.9);
+    }
+  }
+
   @media only screen and (min-width: 1440px) {
     height: $btn-height-lg;
     gap: $gap-lg;
@@ -89,7 +98,8 @@
     color: $text-color;
     background: $bg-text;
     transition: background-color variables.$transition-delay
-      variables.$transition-type;
+        variables.$transition-type,
+      color variables.$transition-delay variables.$transition-type;
 
     @media only screen and (max-width: 374.99px) {
       font-size: 14px;
@@ -108,6 +118,8 @@
     left: 0;
     width: $text-width-sm;
     height: $btn-height-sm;
+    transition: transform variables.$transition-delay variables.$transition-type;
+
     &-lg {
       display: none;
     }
@@ -132,7 +144,8 @@
 
     svg {
       stroke: $icon-color;
-      transition: stroke variables.$transition-delay variables.$transition-type;
+      transition: stroke variables.$transition-delay variables.$transition-type,
+        transform variables.$transition-delay variables.$transition-type;
     }
 
     @media only screen and (min-width: 1440px) {

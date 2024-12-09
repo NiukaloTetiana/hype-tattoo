@@ -99,10 +99,6 @@
     }
   }
 
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
-
   &__meeting {
     @include mixins.flex-start;
 

@@ -249,6 +249,7 @@
     width: 60px;
     height: 60px;
     background-color: variables.$accent-color;
+    transform: scale(1);
     transition: background-color variables.$transition-delay
         variables.$transition-type,
       stroke variables.$transition-delay variables.$transition-type;
@@ -257,9 +258,16 @@
     &:focus-visible,
     &:active {
       background: variables.$black-text-color;
+      transform: scale(1.2);
 
-      svg {
+      .feedback__icon--arrow {
         stroke: variables.$accent-color;
+        transform: translateX(8px);
+      }
+
+      .feedback__icon--rotate {
+        stroke: variables.$accent-color;
+        transform: rotate(180deg) translateX(8px);
       }
     }
 
@@ -281,10 +289,14 @@
 
   &__icon--arrow {
     stroke: variables.$black-text-color;
+    transition: stroke variables.$transition-delay variables.$transition-type,
+      transform variables.$transition-delay variables.$transition-type;
   }
 
   &__icon--rotate {
     transform: rotate(180deg);
+    transition: stroke variables.$transition-delay variables.$transition-type,
+      transform variables.$transition-delay variables.$transition-type;
   }
 
   &__button--course {

@@ -45,6 +45,12 @@ a {
   text-decoration: none;
   color: currentColor;
   display: inline-block;
+  transition: color variables.$transition-delay variables.$transition-type;
+
+  &:hover,
+  &:focus-visible {
+    color: variables.$black-text-color;
+  }
 }
 
 h1,
@@ -84,6 +90,10 @@ menu {
   list-style: none;
   margin: 0;
   padding-left: 0;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
 }
 
 summary {
@@ -134,7 +144,7 @@ summary {
   bottom: 20px;
   right: 15px;
   @include mixins.flex-center;
-  background-color: #078385;
+  background-color: variables.$accent-dark-color;
   width: 40px;
   height: 40px;
   padding: 5px;
@@ -156,6 +166,7 @@ summary {
   &:hover,
   &:focus-visible {
     background-color: variables.$accent-color;
+    transform: translateY(-7px);
   }
 
   @media only screen and (min-width: 1440px) {
