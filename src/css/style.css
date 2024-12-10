@@ -4559,10 +4559,14 @@ summary {
   background-color: #fff;
 }
 .artist__button:hover .artist__icon--arrow, .artist__button:focus-visible .artist__icon--arrow, .artist__button:active .artist__icon--arrow {
-  transform: rotate(45deg) translateX(50%) translateY(-5px);
+  fill: #00d0d2;
+  stroke: #00d0d2;
 }
-.artist__button:hover .artist__icon--rotate, .artist__button:focus-visible .artist__icon--rotate, .artist__button:active .artist__icon--rotate {
-  transform: rotate(225deg) translateX(50%) translateY(-5px);
+.artist__button:hover .artist__icon--left, .artist__button:focus-visible .artist__icon--left, .artist__button:active .artist__icon--left {
+  transform: rotate(-495deg);
+}
+.artist__button:hover .artist__icon--right, .artist__button:focus-visible .artist__icon--right, .artist__button:active .artist__icon--right {
+  transform: rotate(405deg);
 }
 @media only screen and (max-width: 374.99px) {
   .artist__button {
@@ -4583,9 +4587,9 @@ summary {
   }
 }
 .artist__icon--arrow {
+  fill: #000;
   stroke: #000;
-  transform: rotate(45deg);
-  transition: fill 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .artist__icon--arrow {
@@ -4593,9 +4597,11 @@ summary {
     width: 16px;
   }
 }
-.artist__icon--rotate {
-  transform: rotate(225deg);
-  transition: fill 0.3s ease, transform 0.3s ease;
+.artist__icon--left {
+  transform: rotate(-135deg);
+}
+.artist__icon--right {
+  transform: rotate(45deg);
 }
 .artist__expirience--wrapper {
   position: relative;
@@ -5124,7 +5130,7 @@ summary {
   height: 60px;
   background-color: #00d0d2;
   transform: scale(1);
-  transition: background-color 0.3s ease, stroke 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .feedback__button:hover, .feedback__button:focus-visible, .feedback__button:active {
   background: #000;
@@ -5132,11 +5138,13 @@ summary {
 }
 .feedback__button:hover .feedback__icon--arrow, .feedback__button:focus-visible .feedback__icon--arrow, .feedback__button:active .feedback__icon--arrow {
   stroke: #00d0d2;
-  transform: translateX(8px);
+  fill: #00d0d2;
 }
-.feedback__button:hover .feedback__icon--rotate, .feedback__button:focus-visible .feedback__icon--rotate, .feedback__button:active .feedback__icon--rotate {
-  stroke: #00d0d2;
-  transform: rotate(180deg) translateX(8px);
+.feedback__button:hover .feedback__icon--left, .feedback__button:focus-visible .feedback__icon--left, .feedback__button:active .feedback__icon--left {
+  transform: translateX(-8px);
+}
+.feedback__button:hover .feedback__icon--right, .feedback__button:focus-visible .feedback__icon--right, .feedback__button:active .feedback__icon--right {
+  transform: rotate(180deg) translateX(-8px);
 }
 @media only screen and (max-width: 374.98px) {
   .feedback__button {
@@ -5155,12 +5163,12 @@ summary {
   }
 }
 .feedback__icon--arrow {
-  stroke: #000;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  fill: #000;
+  stroke: none;
+  transition: stroke 0.3s ease, fill 0.3s ease, transform 0.3s ease;
 }
-.feedback__icon--rotate {
+.feedback__icon--right {
   transform: rotate(180deg);
-  transition: stroke 0.3s ease, transform 0.3s ease;
 }
 .feedback__button--course {
   width: 245px;

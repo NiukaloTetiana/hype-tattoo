@@ -252,7 +252,7 @@
     transform: scale(1);
     transition: background-color variables.$transition-delay
         variables.$transition-type,
-      stroke variables.$transition-delay variables.$transition-type;
+      transform variables.$transition-delay variables.$transition-type;
 
     &:hover,
     &:focus-visible,
@@ -262,12 +262,15 @@
 
       .feedback__icon--arrow {
         stroke: variables.$accent-color;
-        transform: translateX(8px);
+        fill: variables.$accent-color;
       }
 
-      .feedback__icon--rotate {
-        stroke: variables.$accent-color;
-        transform: rotate(180deg) translateX(8px);
+      .feedback__icon--left {
+        transform: translateX(-8px);
+      }
+
+      .feedback__icon--right {
+        transform: rotate(180deg) translateX(-8px);
       }
     }
 
@@ -288,15 +291,15 @@
   }
 
   &__icon--arrow {
-    stroke: variables.$black-text-color;
+    fill: variables.$black-text-color;
+    stroke: none;
     transition: stroke variables.$transition-delay variables.$transition-type,
+      fill variables.$transition-delay variables.$transition-type,
       transform variables.$transition-delay variables.$transition-type;
   }
 
-  &__icon--rotate {
+  &__icon--right {
     transform: rotate(180deg);
-    transition: stroke variables.$transition-delay variables.$transition-type,
-      transform variables.$transition-delay variables.$transition-type;
   }
 
   &__button--course {

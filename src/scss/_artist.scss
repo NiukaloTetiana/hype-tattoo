@@ -365,11 +365,16 @@
       background-color: variables.$white-text-color;
 
       .artist__icon--arrow {
-        transform: rotate(45deg) translateX(50%) translateY(-5px);
+        fill: variables.$accent-color;
+        stroke: variables.$accent-color;
       }
 
-      .artist__icon--rotate {
-        transform: rotate(225deg) translateX(50%) translateY(-5px);
+      .artist__icon--left {
+        transform: rotate(-495deg);
+      }
+
+      .artist__icon--right {
+        transform: rotate(405deg);
       }
     }
 
@@ -390,9 +395,10 @@
   }
 
   &__icon--arrow {
+    fill: variables.$black-text-color;
     stroke: variables.$black-text-color;
-    transform: rotate(45deg);
     transition: fill variables.$transition-delay variables.$transition-type,
+      stroke variables.$transition-delay variables.$transition-type,
       transform variables.$transition-delay variables.$transition-type;
 
     @media only screen and (min-width: 1440px) {
@@ -401,10 +407,12 @@
     }
   }
 
-  &__icon--rotate {
-    transform: rotate(225deg);
-    transition: fill variables.$transition-delay variables.$transition-type,
-      transform variables.$transition-delay variables.$transition-type;
+  &__icon--left {
+    transform: rotate(-135deg);
+  }
+
+  &__icon--right {
+    transform: rotate(45deg);
   }
 
   &__expirience--wrapper {

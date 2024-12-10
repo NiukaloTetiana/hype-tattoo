@@ -6,11 +6,6 @@ const artisListButton = document.querySelector(".js-artist__list--button");
 const prevBtn = document.querySelector(".js-artist__button-prev");
 const nextBtn = document.querySelector(".js-artist__button-next");
 
-const slidesCount = artistList.children.length;
-let slideWidth = 0;
-let listWidth = 0;
-let activeIndex = 0;
-
 const breakpoints = [
   { max: 374.98, slideWidth: 298, gap: 36 },
   { max: 767.98, slideWidth: 350, gap: 36 },
@@ -18,6 +13,23 @@ const breakpoints = [
   { max: 1919.98, slideWidth: 1360, gap: 64 },
   { max: Infinity, slideWidth: 1804, gap: 64 },
 ];
+
+let slideWidth = 0;
+let listWidth = 0;
+let activeIndex = 1;
+let slidesCount = 0;
+let isAnimating = false;
+
+const cloneSlides = () => {
+  const firstSlide = artistList.children[0];
+  const lastSlide = artistList.children[artistList.children.length - 1];
+
+  const firstClone = firstSlide.cloneNode(true);
+  const lastClone = lastSlide.cloneNode(true);
+
+  artistList.appendChild(firstClone);
+  artistList.insertBefore(lastClone, artistList.firstChild);
+};
 
 const updateSlideWidth = () => {
   const currentBreakpoint =
@@ -34,11 +46,18 @@ const updateSlideWidth = () => {
 const updateActiveIndicator = () => {
   const artistItems = artistIndicatorList.querySelectorAll(".js-artist__item");
 
+  const realIndex =
+    activeIndex === 0
+      ? slidesCount - 3
+      : activeIndex === slidesCount - 1
+      ? 0
+      : activeIndex - 1;
+
   artistItems.forEach((item, index) =>
-    item.classList.toggle("artist__color--accent", index === activeIndex)
+    item.classList.toggle("artist__color--accent", index === realIndex)
   );
 
-  const translateX = `${activeIndex * 64}px`;
+  const translateX = `${realIndex * 64}px`;
   artisListButton.style.setProperty("--after-translate-x", translateX);
 };
 
@@ -48,17 +67,42 @@ const updateTransform = () => {
 };
 
 const changeSlide = (direction) => {
-  const nextIndex = activeIndex + direction;
+  if (isAnimating) return;
 
-  if (nextIndex >= 0 && nextIndex < slidesCount) {
-    activeIndex = nextIndex;
-    updateTransform();
-    updateActiveIndicator();
-  }
+  isAnimating = true;
+  activeIndex += direction;
+
+  artistList.style.transition = "transform 0.3s ease-in-out";
+  updateTransform();
+  updateActiveIndicator();
 };
+
+artistList.addEventListener("transitionend", () => {
+  isAnimating = false;
+
+  if (activeIndex === slidesCount - 1) {
+    artistList.style.transition = "none";
+    activeIndex = 1;
+    updateTransform();
+    setTimeout(() => {
+      artistList.style.transition = "";
+    });
+  }
+
+  if (activeIndex === 0) {
+    artistList.style.transition = "none";
+    activeIndex = slidesCount - 2;
+    updateTransform();
+    setTimeout(() => {
+      artistList.style.transition = "";
+    });
+  }
+});
 
 prevBtn.addEventListener("click", () => changeSlide(-1));
 nextBtn.addEventListener("click", () => changeSlide(1));
-
 window.addEventListener("resize", throttle(updateSlideWidth, 500));
+
+cloneSlides();
+slidesCount = artistList.children.length;
 updateSlideWidth();
