@@ -166,8 +166,9 @@ summary {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .scroll-up-btn__icon {
-  transform: rotate(-90deg);
+  transform: rotate(-45deg);
   transition: stroke 0.3s ease;
+  fill: #fff;
   stroke: #fff;
 }
 .scroll-up-btn:hover, .scroll-up-btn:focus-visible {
@@ -278,6 +279,9 @@ summary {
     fill: #000;
   }
 }
+.thank-page .header__logo, .not-found-page .header__logo {
+  fill: #fff;
+}
 .header__button-menu {
   display: flex;
   gap: 10px;
@@ -292,6 +296,9 @@ summary {
   text-transform: uppercase;
   color: #fff;
   transition: color 0.3s ease;
+}
+.thank-page .header__button-menu, .not-found-page .header__button-menu {
+  color: #fff;
 }
 .header__button-menu svg {
   fill: #00d0d2;
@@ -321,6 +328,12 @@ summary {
   .header__button-menu:hover svg, .header__button-menu:focus-visible svg, .header__button-menu:active svg {
     fill: #000;
   }
+  .header__button-menu:hover .thank-page svg,
+  .header__button-menu:hover .not-found-page svg, .header__button-menu:focus-visible .thank-page svg,
+  .header__button-menu:focus-visible .not-found-page svg, .header__button-menu:active .thank-page svg,
+  .header__button-menu:active .not-found-page svg {
+    fill: #fff;
+  }
 }
 
 .backdrop {
@@ -344,7 +357,7 @@ summary {
   padding: 45px 20px;
   margin-left: auto;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu {
     padding-block: 30px;
   }
@@ -392,7 +405,7 @@ summary {
   justify-content: space-between;
   margin-bottom: 50px;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__container-text {
     margin-bottom: 28px;
   }
@@ -415,7 +428,7 @@ summary {
   text-transform: uppercase;
   color: #fff;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__text {
     font-size: 18px;
   }
@@ -453,7 +466,7 @@ summary {
   fill: #000;
   transform: rotate(180deg);
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__toggle {
     font-size: 18px;
     gap: 20px;
@@ -488,6 +501,7 @@ summary {
     display: flex;
     align-items: center;
     gap: 78px;
+    align-items: end;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -498,7 +512,7 @@ summary {
 .menu__nav {
   margin-bottom: 60px;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__nav {
     margin-bottom: 40px;
   }
@@ -519,7 +533,7 @@ summary {
   flex-direction: column;
   gap: 12px;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__list {
     gap: 9px;
   }
@@ -549,7 +563,7 @@ summary {
 .menu__link:hover, .menu__link:focus-visible, .menu__link:active {
   text-decoration: underline;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__link {
     font-size: 28px;
   }
@@ -574,7 +588,7 @@ summary {
   text-align: center;
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__legacy {
     font-size: 44px;
   }
@@ -584,7 +598,7 @@ summary {
     font-size: 170px;
     width: 683px;
     text-align: left;
-    padding-top: 50px;
+    padding-top: 0;
     margin-bottom: 50px;
   }
 }
@@ -672,8 +686,9 @@ summary {
   background-color: #000;
 }
 .menu__button-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .menu__button-span-icon {
@@ -689,8 +704,9 @@ summary {
 }
 .menu__button:hover .menu__button-span-icon svg, .menu__button:focus-visible .menu__button-span-icon svg, .menu__button:active .menu__button-span-icon svg {
   stroke: #00d0d2;
+  fill: #00d0d2;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__button {
     width: 233px;
     height: 56px;
@@ -719,6 +735,11 @@ summary {
     margin-bottom: 59px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .menu__wrapper-copyright {
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 1440px) {
   .menu__wrapper-copyright {
     display: flex;
@@ -728,8 +749,6 @@ summary {
 }
 @media only screen and (min-width: 1920px) {
   .menu__wrapper-copyright {
-    display: flex;
-    align-items: center;
     gap: 107px;
   }
 }
@@ -742,9 +761,9 @@ summary {
   text-align: center;
   color: #fff;
   margin-bottom: 12px;
-  width: 100%;
+  width: fit-content;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__link--mail {
     font-size: 20px;
   }
@@ -773,7 +792,7 @@ summary {
 .menu__copyright:last-child {
   margin-bottom: 0;
 }
-@media only screen and (max-width: 374.99px) {
+@media only screen and (max-width: 374.98px) {
   .menu__copyright {
     font-size: 12px;
   }
@@ -1023,8 +1042,9 @@ summary {
   background-color: #00d0d2;
 }
 .hero__button-span-icon svg {
+  fill: #000;
   stroke: #000;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .hero__button-span-icon {
@@ -1040,6 +1060,7 @@ summary {
 }
 .hero__button:hover .hero__button-span-icon svg, .hero__button:focus-visible .hero__button-span-icon svg, .hero__button:active .hero__button-span-icon svg {
   stroke: #fff;
+  fill: #fff;
 }
 @media only screen and (min-width: 1440px) {
   .hero__button {
@@ -1578,8 +1599,9 @@ summary {
   background-color: #000;
 }
 .footer__button-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .footer__button-span-icon {
@@ -1595,6 +1617,7 @@ summary {
 }
 .footer__button:hover .footer__button-span-icon svg, .footer__button:focus-visible .footer__button-span-icon svg, .footer__button:active .footer__button-span-icon svg {
   stroke: #00d0d2;
+  fill: #00d0d2;
 }
 @media only screen and (max-width: 374.98px) {
   .footer__button {
@@ -2753,8 +2776,9 @@ summary {
   background-color: #00d0d2;
 }
 .programm__button-span-icon svg {
+  fill: #000;
   stroke: #000;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .programm__button-span-icon {
@@ -2770,6 +2794,7 @@ summary {
 }
 .programm__button:hover .programm__button-span-icon svg, .programm__button:focus-visible .programm__button-span-icon svg, .programm__button:active .programm__button-span-icon svg {
   stroke: #fff;
+  fill: #fff;
 }
 @media only screen and (min-width: 1440px) {
   .programm__button {
@@ -3035,8 +3060,9 @@ summary {
   background-color: #00d0d2;
 }
 .programm__button--best-span-icon svg {
+  fill: #000;
   stroke: #000;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .programm__button--best-span-icon {
@@ -3052,6 +3078,7 @@ summary {
 }
 .programm__button--best:hover .programm__button--best-span-icon svg, .programm__button--best:focus-visible .programm__button--best-span-icon svg, .programm__button--best:active .programm__button--best-span-icon svg {
   stroke: #fff;
+  fill: #fff;
 }
 @media only screen and (min-width: 1440px) {
   .programm__button--best {
@@ -3465,8 +3492,9 @@ summary {
   background-color: #00d0d2;
 }
 .package__button-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .package__button-span-icon {
@@ -3482,6 +3510,7 @@ summary {
 }
 .package__button:hover .package__button-span-icon svg, .package__button:focus-visible .package__button-span-icon svg, .package__button:active .package__button-span-icon svg {
   stroke: #000;
+  fill: #000;
 }
 @media only screen and (max-width: 374.98px) {
   .package__button {
@@ -3648,8 +3677,9 @@ summary {
   background-color: #000;
 }
 .package__button--hyper-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .package__button--hyper-span-icon {
@@ -3665,6 +3695,7 @@ summary {
 }
 .package__button--hyper:hover .package__button--hyper-span-icon svg, .package__button--hyper:focus-visible .package__button--hyper-span-icon svg, .package__button--hyper:active .package__button--hyper-span-icon svg {
   stroke: #00d0d2;
+  fill: #00d0d2;
 }
 @media only screen and (max-width: 374.98px) {
   .package__button--hyper {
@@ -3831,8 +3862,9 @@ summary {
   background-color: #00d0d2;
 }
 .package__button--blast-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .package__button--blast-span-icon {
@@ -3849,6 +3881,7 @@ summary {
 }
 .package__button--blast:hover .package__button--blast-span-icon svg, .package__button--blast:focus-visible .package__button--blast-span-icon svg, .package__button--blast:active .package__button--blast-span-icon svg {
   stroke: #000;
+  fill: #000;
 }
 @media only screen and (max-width: 374.98px) {
   .package__button--blast {
@@ -5193,8 +5226,9 @@ summary {
   background-color: #00d0d2;
 }
 .feedback__button--course-span-icon svg {
+  fill: #000;
   stroke: #000;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .feedback__button--course-span-icon {
@@ -5210,6 +5244,7 @@ summary {
 }
 .feedback__button--course:hover .feedback__button--course-span-icon svg, .feedback__button--course:focus-visible .feedback__button--course-span-icon svg, .feedback__button--course:active .feedback__button--course-span-icon svg {
   stroke: #fff;
+  fill: #fff;
 }
 @media only screen and (min-width: 1440px) {
   .feedback__button--course {
@@ -5268,16 +5303,11 @@ summary {
 .faq__list {
   display: flex;
   flex-direction: column;
-  width: 335px;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .faq__list {
     width: 480px;
-  }
-}
-@media only screen and (max-width: 374.98px) {
-  .faq__list {
-    width: 280px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -5299,15 +5329,9 @@ summary {
 .faq__item:has(details[open]) {
   margin-bottom: 20px;
 }
-.faq__item:has(details[open]) div {
-  margin-top: 20px;
-}
 @media only screen and (min-width: 1440px) {
   .faq__item:has(details[open]) {
     margin-block: 40px;
-  }
-  .faq__item:has(details[open]) div {
-    margin-top: 40px;
   }
 }
 @media only screen and (max-width: 374.98px) {
@@ -5320,14 +5344,54 @@ summary {
     padding-block: 46px;
   }
 }
-.faq details {
-  display: block;
+.faq__details:hover .faq__span, .faq__details:focus-visible .faq__span {
+  background-color: #00d0d2;
+  border: none;
 }
-.faq details[open] summary {
+.faq__details:hover .faq__span svg, .faq__details:focus-visible .faq__span svg {
+  fill: #fff;
+}
+.faq__details {
+  display: block;
+  transition: backgraund-color 0.3s ease, border 0.3s ease;
+}
+.faq__details[open] summary {
   color: #00d0d2;
 }
-.faq details[open] summary svg {
+.faq__details[open] summary svg {
   transform: rotate(180deg);
+  width: 12px;
+}
+@media only screen and (max-width: 374.98px) {
+  .faq__details[open] summary svg {
+    width: 8px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .faq__details[open] summary svg {
+    width: 30px;
+  }
+}
+.faq__details[open] .faq__icon-plus {
+  display: none;
+}
+.faq__details[open] .faq__icon-minus {
+  display: block;
+}
+.faq__details:not([open]) .faq__icon-plus {
+  display: block;
+}
+.faq__details:not([open]) .faq__icon-minus {
+  display: none;
+}
+.faq__details[open] + .faq__answer-wrapper {
+  grid-template-rows: 1fr;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1440px) {
+  .faq__details[open] + .faq__answer-wrapper {
+    margin-top: 40px;
+  }
 }
 .faq__summary {
   display: flex;
@@ -5374,7 +5438,7 @@ summary {
 .faq__icon {
   fill: #000;
   stroke: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 @media only screen and (max-width: 374.98px) {
   .faq__icon {
@@ -5388,11 +5452,17 @@ summary {
     height: 36px;
   }
 }
+.faq__answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition-duration: 0.5s;
+}
 .faq__answer {
   font-weight: 500;
   line-height: 1.2;
   font-size: 12px;
   padding-inline: 10px;
+  overflow: hidden;
 }
 @media only screen and (max-width: 374.98px) {
   .faq__answer {
@@ -5431,6 +5501,9 @@ summary {
     padding: 32px 44px 30px 32px;
   }
 }
+.modal[open] {
+  animation: glowIn 0.4s ease-in-out;
+}
 .modal::backdrop {
   background-color: rgba(0, 0, 0, 0.44);
 }
@@ -5467,19 +5540,6 @@ summary {
 .modal__content {
   position: relative;
   z-index: 2;
-}
-.modal .modal[open] {
-  animation: fadenIn 0.3s ease;
-}
-@keyframes fadenIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
 }
 .modal__button--close {
   position: absolute;
@@ -5669,8 +5729,9 @@ summary {
   background-color: #00d0d2;
 }
 .modal__button-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .modal__button-span-icon {
@@ -5750,6 +5811,28 @@ summary {
   }
 }
 
+@keyframes fadenIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes glowIn {
+  0% {
+    transform: scale(0.8) translate(-50%, -50%);
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    opacity: 1;
+  }
+}
 .thank {
   position: relative;
   isolation: isolate;
@@ -5816,7 +5899,7 @@ summary {
 .thank__title::before {
   content: "";
   position: absolute;
-  top: -126px;
+  top: -122px;
   left: 108px;
   width: 115px;
   height: 115px;
@@ -5977,8 +6060,9 @@ summary {
   background-color: #00d0d2;
 }
 .thank__button-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .thank__button-span-icon {
@@ -5990,10 +6074,12 @@ summary {
   }
 }
 .thank__button:hover .thank__button-text, .thank__button:focus-visible .thank__button-text, .thank__button:active .thank__button-text {
-  background-color: #00d0d2;
+  background-color: #08898b;
+  color: #fff;
 }
 .thank__button:hover .thank__button-span-icon svg, .thank__button:focus-visible .thank__button-span-icon svg, .thank__button:active .thank__button-span-icon svg {
   stroke: #000;
+  fill: #000;
 }
 @media only screen and (max-width: 374.98px) {
   .thank__button {
@@ -6190,8 +6276,9 @@ summary {
   background-color: #00d0d2;
 }
 .not-found__button-span-icon svg {
+  fill: #fff;
   stroke: #fff;
-  transition: stroke 0.3s ease, transform 0.3s ease;
+  transition: fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 1440px) {
   .not-found__button-span-icon {
@@ -6203,10 +6290,12 @@ summary {
   }
 }
 .not-found__button:hover .not-found__button-text, .not-found__button:focus-visible .not-found__button-text, .not-found__button:active .not-found__button-text {
-  background-color: #00d0d2;
+  background-color: #08898b;
+  color: #fff;
 }
 .not-found__button:hover .not-found__button-span-icon svg, .not-found__button:focus-visible .not-found__button-span-icon svg, .not-found__button:active .not-found__button-span-icon svg {
   stroke: #000;
+  fill: #000;
 }
 @media only screen and (max-width: 374.98px) {
   .not-found__button {

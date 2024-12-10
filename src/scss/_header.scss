@@ -36,6 +36,11 @@
       height: 77px;
       fill: variables.$black-text-color;
     }
+
+    .thank-page &,
+    .not-found-page & {
+      fill: variables.$white-text-color;
+    }
   }
 
   &__button-menu {
@@ -54,6 +59,11 @@
     text-transform: uppercase;
     color: variables.$white-text-color;
     transition: color variables.$transition-delay variables.$transition-type;
+
+    .thank-page &,
+    .not-found-page & {
+      color: variables.$white-text-color;
+    }
 
     svg {
       fill: variables.$accent-color;
@@ -91,6 +101,11 @@
         svg {
           fill: variables.$black-text-color;
         }
+
+        .thank-page svg,
+        .not-found-page svg {
+          fill: variables.$white-text-color;
+        }
       }
     }
   }
@@ -117,7 +132,7 @@
   padding: 45px 20px;
   margin-left: auto;
 
-  @media only screen and (max-width: 374.99px) {
+  @media only screen and (max-width: 374.98px) {
     padding-block: 30px;
   }
 
@@ -160,7 +175,7 @@
     @include mixins.flex-between;
     margin-bottom: 50px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       margin-bottom: 28px;
     }
 
@@ -177,7 +192,7 @@
     @include mixins.text;
     color: variables.$white-text-color;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 18px;
     }
 
@@ -215,7 +230,7 @@
       }
     }
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 18px;
       gap: 20px;
 
@@ -246,15 +261,14 @@
     }
   }
 
-  @media only screen and (min-width: 1440px) {
-    &__wrapper-nav {
+  &__wrapper-nav {
+    @media only screen and (min-width: 1440px) {
       @include mixins.flex-start;
       gap: 78px;
+      align-items: end;
     }
-  }
 
-  @media only screen and (min-width: 1920px) {
-    &__wrapper-nav {
+    @media only screen and (min-width: 1920px) {
       gap: 158px;
     }
   }
@@ -262,7 +276,7 @@
   &__nav {
     margin-bottom: 60px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       margin-bottom: 40px;
     }
 
@@ -281,7 +295,7 @@
     flex-direction: column;
     gap: 12px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       gap: 9px;
     }
 
@@ -314,7 +328,7 @@
       text-decoration: underline;
     }
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 28px;
     }
 
@@ -337,7 +351,7 @@
     text-align: center;
     margin-bottom: 20px;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 44px;
     }
 
@@ -345,7 +359,7 @@
       font-size: 170px;
       width: 683px;
       text-align: left;
-      padding-top: 50px;
+      padding-top: 0;
       margin-bottom: 50px;
     }
 
@@ -380,10 +394,11 @@
 
       .menu__button-span-icon svg {
         stroke: variables.$accent-color;
+        fill: variables.$accent-color;
       }
     }
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       width: 233px;
       height: 56px;
       margin-bottom: 36px;
@@ -413,16 +428,17 @@
     }
   }
 
-  @media only screen and (min-width: 1440px) {
-    &__wrapper-copyright {
+  &__wrapper-copyright {
+    @media only screen and (min-width: 768px) {
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 1440px) {
       @include mixins.flex-start;
       gap: 57px;
     }
-  }
 
-  @media only screen and (min-width: 1920px) {
-    &__wrapper-copyright {
-      @include mixins.flex-start;
+    @media only screen and (min-width: 1920px) {
       gap: 107px;
     }
   }
@@ -436,9 +452,9 @@
     text-align: center;
     color: variables.$white-text-color;
     margin-bottom: 12px;
-    width: 100%;
+    width: fit-content;
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 20px;
     }
 
@@ -456,7 +472,7 @@
   &__copyright {
     @include mixins.copyright($margin-bt: 12px, $text-al: center);
 
-    @media only screen and (max-width: 374.99px) {
+    @media only screen and (max-width: 374.98px) {
       font-size: 12px;
     }
 

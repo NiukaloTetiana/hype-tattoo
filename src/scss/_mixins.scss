@@ -143,8 +143,10 @@
     background-color: $bg-color;
 
     svg {
+      fill: $icon-color;
       stroke: $icon-color;
-      transition: stroke variables.$transition-delay variables.$transition-type,
+      transition: fill variables.$transition-delay variables.$transition-type,
+        stroke variables.$transition-delay variables.$transition-type,
         transform variables.$transition-delay variables.$transition-type;
     }
 

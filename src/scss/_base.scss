@@ -158,8 +158,9 @@ summary {
     transform variables.$transition-delay variables.$transition-type;
 
   &__icon {
-    transform: rotate(-90deg);
+    transform: rotate(-45deg);
     transition: stroke variables.$transition-delay variables.$transition-type;
+    fill: variables.$white-text-color;
     stroke: variables.$white-text-color;
   }
 

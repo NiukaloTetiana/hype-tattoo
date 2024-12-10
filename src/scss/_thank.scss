@@ -67,7 +67,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: -126px;
+      top: -122px;
       left: 108px;
       width: 115px;
       height: 115px;
@@ -173,11 +173,13 @@
     &:focus-visible,
     &:active {
       .thank__button-text {
-        background-color: variables.$accent-color;
+        background-color: variables.$accent-dark-color;
+        color: variables.$white-text-color;
       }
 
       .thank__button-span-icon svg {
         stroke: variables.$black-text-color;
+        fill: variables.$black-text-color;
       }
     }
 
