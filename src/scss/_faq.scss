@@ -36,14 +36,10 @@
   &__list {
     display: flex;
     flex-direction: column;
-    width: 335px;
+    width: 100%;
 
     @media only screen and (min-width: 768px) {
       width: 480px;
-    }
-
-    @media only screen and (max-width: 374.98px) {
-      width: 280px;
     }
 
     @media only screen and (min-width: 1440px) {
@@ -64,16 +60,8 @@
     &:has(details[open]) {
       margin-bottom: 20px;
 
-      div {
-        margin-top: 20px;
-      }
-
       @media only screen and (min-width: 1440px) {
         margin-block: 40px;
-
-        div {
-          margin-top: 40px;
-        }
       }
     }
 
@@ -86,8 +74,21 @@
     }
   }
 
-  details {
+  &__details:hover &__span,
+  &__details:focus-visible &__span {
+    background-color: variables.$accent-color;
+    border: none;
+
+    svg {
+      fill: variables.$white-text-color;
+    }
+  }
+
+  &__details {
     display: block;
+    transition: backgraund-color variables.$transition-delay
+        variables.$transition-type,
+      border variables.$transition-delay variables.$transition-type;
 
     &[open] {
       summary {
@@ -95,8 +96,44 @@
 
         svg {
           transform: rotate(180deg);
+          width: 12px;
+
+          @media only screen and (max-width: 374.98px) {
+            width: 8px;
+          }
+
+          @media only screen and (min-width: 1440px) {
+            width: 30px;
+          }
         }
       }
+
+      .faq__icon-plus {
+        display: none;
+      }
+
+      .faq__icon-minus {
+        display: block;
+      }
+    }
+
+    &:not([open]) {
+      .faq__icon-plus {
+        display: block;
+      }
+
+      .faq__icon-minus {
+        display: none;
+      }
+    }
+  }
+
+  &__details[open] + &__answer-wrapper {
+    grid-template-rows: 1fr;
+    margin-top: 20px;
+
+    @media only screen and (min-width: 1440px) {
+      margin-top: 40px;
     }
   }
 
@@ -139,7 +176,8 @@
   &__icon {
     fill: variables.$black-text-color;
     stroke: none;
-    transition: transform variables.$transition-delay variables.$transition-type;
+    transition: transform variables.$transition-delay variables.$transition-type,
+      fill variables.$transition-delay variables.$transition-type;
 
     @media only screen and (max-width: 374.98px) {
       width: 10px;
@@ -151,12 +189,18 @@
       height: 36px;
     }
   }
+  &__answer-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition-duration: 0.5s;
+  }
 
   &__answer {
     font-weight: 500;
     line-height: 1.2;
     font-size: 12px;
     padding-inline: 10px;
+    overflow: hidden;
 
     @media only screen and (max-width: 374.98px) {
       font-size: 10px;
