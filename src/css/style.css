@@ -1337,7 +1337,7 @@ summary {
 }
 @media only screen and (min-width: 1440px) {
   .footer {
-    padding-block: 120px 305px;
+    padding-block: 120px 328px;
   }
 }
 .footer__container {
@@ -2381,6 +2381,7 @@ summary {
 }
 @media only screen and (min-width: 768px) {
   .programm__list {
+    display: block;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     width: 347px;
   }
@@ -2523,6 +2524,7 @@ summary {
 }
 @media only screen and (min-width: 768px) {
   .programm__title-wrapper {
+    position: sticky;
     display: flex;
     align-items: end;
     gap: 176px;
